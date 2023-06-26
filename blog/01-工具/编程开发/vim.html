@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vim | Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/23.cecba155.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/16.88b2bba9.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/20.1a2d20ad.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/35.7f7e9e68.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/39.2232fa48.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.ccb47428.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/68.558e1980.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/75.a770d2f2.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/82.5b4da558.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vim</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#介绍" class="sidebar-link">介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#普通模式" class="sidebar-link">普通模式</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#插入模式" class="sidebar-link">插入模式</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#命令模式" class="sidebar-link">命令模式</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#可视化模式" class="sidebar-link">可视化模式</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#安装" class="sidebar-link">安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#移动跳转" class="sidebar-link">移动跳转</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#选择" class="sidebar-link">选择</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#剪切" class="sidebar-link">剪切</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#删除修改" class="sidebar-link">删除修改</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#编辑修改" class="sidebar-link">编辑修改</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#查找" class="sidebar-link">查找</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#替换" class="sidebar-link">替换</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#复制" class="sidebar-link">复制</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#粘贴" class="sidebar-link">粘贴</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#撤销" class="sidebar-link">撤销</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#窗口管理" class="sidebar-link">窗口管理</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#标签页管理" class="sidebar-link">标签页管理</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#多行注释" class="sidebar-link">多行注释</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#取消多行注释" class="sidebar-link">取消多行注释</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#缩进" class="sidebar-link">缩进</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#折叠" class="sidebar-link">折叠</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#插件" class="sidebar-link">插件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#对齐" class="sidebar-link">对齐</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#键盘映射" class="sidebar-link">键盘映射</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#实战" class="sidebar-link">实战</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#如何快速编辑" class="sidebar-link">如何快速编辑</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#如何快速填充" class="sidebar-link">如何快速填充</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/vim.html#我的配置" class="sidebar-link">我的配置</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vim"><a href="#vim" class="header-anchor">#</a> Vim</h1> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>Vim是从vi发展出来的一个文本编辑器。其代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用</p> <p>Neovim 是基于 vim 的速度更快的编辑器，也是 vim 的良好替代品，官网：https://neovim.io/</p> <p>vim包含</p> <p>vim 具有多种模式，每种模式下可以执行不同的操作。分别是普通模式、插入模式、命令模式和可视化模式，各模式的功能区分如下：</p> <h3 id="普通模式"><a href="#普通模式" class="header-anchor">#</a> 普通模式</h3> <p>vim默认模式，其它模式下按 <code>esc</code> 即可进入普通模式，控制屏幕光标的移动、字符、字或行的删除、移动复制某区段</p> <h3 id="插入模式"><a href="#插入模式" class="header-anchor">#</a> 插入模式</h3> <p>在普通模式下，按下<code>i</code>键进入插入模式，用于直接输入文本，并进行编辑</p> <table><thead><tr><th>指令</th> <th>说明</th> <th>助记</th></tr></thead> <tbody><tr><td>i</td> <td>在当前光标字符前插入</td> <td>insert</td></tr> <tr><td>a</td> <td>在当前光标字符后插入</td> <td>append</td></tr> <tr><td>I</td> <td>在当前行首插入</td> <td>Insert</td></tr> <tr><td>A</td> <td>在当前行尾插入</td> <td>Append</td></tr> <tr><td>o</td> <td>在下方开一新行插入</td> <td>open</td></tr> <tr><td>O</td> <td>在上方开一新行插入</td> <td>Open</td></tr> <tr><td>gi</td> <td>上一次插入地方插入</td> <td></td></tr></tbody></table> <h3 id="命令模式"><a href="#命令模式" class="header-anchor">#</a> 命令模式</h3> <p>在普通模式下按<code>:</code>进入，用于搜索、替换、保存退出等操作</p> <table><thead><tr><th>指令</th> <th>说明</th></tr></thead> <tbody><tr><td>:w</td> <td>保存</td></tr> <tr><td>:w file</td> <td>另存为文件</td></tr> <tr><td>:q</td> <td>退出</td></tr> <tr><td>:q!</td> <td>放弃修改退出</td></tr> <tr><td>:wq</td> <td>保存修改并退出</td></tr> <tr><td>:e file</td> <td>打开文件file</td></tr></tbody></table> <h3 id="可视化模式"><a href="#可视化模式" class="header-anchor">#</a> 可视化模式</h3> <p>在普通模式下按<code>v</code>进入可视模式</p> <table><thead><tr><th>指令</th> <th>说明</th></tr></thead> <tbody><tr><td>v</td> <td>字符可视化模式，文本选择是以字符为单位</td></tr> <tr><td>V</td> <td>行可视化模式，文本选择是以行为单位</td></tr> <tr><td>ctrl-V</td> <td>块可视化模式，可以选择一个矩形内的文本</td></tr></tbody></table> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language- extra-class"><pre class="language-text"><code>brew install vim
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <h3 id="移动跳转"><a href="#移动跳转" class="header-anchor">#</a> 移动跳转</h3> <ul><li><p><code>hjkl</code> 上下左右</p></li> <li><p><code>0/^/$</code> 移动到行首、行中第1个不为空的字符、行尾</p></li> <li><p><code>b/B</code> 跳转到上一个单词开头</p></li> <li><p><code>w/W</code> 跳转到下一个单词开头</p></li> <li><p><code>e/E</code> 跳转到下一个单词结尾</p></li> <li><p><code>fx</code> 向前移动到字符 x 上</p></li> <li><p><code>Fx</code> 向后移动到字符 x 上</p></li> <li><p><code>tx</code> 向前移动到字符 x 前</p></li> <li><p><code>Tx</code> 向后移动到字符 x 前</p></li> <li><p><code>nb</code> 向前移动n个词</p></li> <li><p><code>nw</code> 向后移动n个词</p></li> <li><p><code>(</code> 到段首</p></li> <li><p><code>)</code> 到段尾</p></li> <li><p><code>{</code> 到段首</p></li> <li><p><code>}</code> 到段尾</p></li> <li><p><code>%</code> 跳转到匹配的块如 }、)、]</p></li> <li><p><code>gg</code> 移动到文件结尾</p></li> <li><p><code>G</code> 移动到文件结尾</p></li> <li><p><code>:n</code> 移动到第n行</p></li> <li><p><code>nG</code> 移动到第n行</p></li> <li><p><code>nk</code> 向上移动n行</p></li> <li><p><code>nj</code> 向下移动n行</p></li> <li><p><code>H/M/L</code> 屏幕开头、中间、结尾</p></li> <li><p><code>ctrl+d</code> 向下翻半页</p></li> <li><p><code>ctrl+u</code> 向上翻半页</p></li> <li><p><code>ctrl+f</code> 向下翻页</p></li> <li><p><code>ctrl+b</code> 向上翻页</p></li> <li><p><code>zt/zz/zb</code> 把当前行设置到顶部、中部、底部</p></li> <li><p><code>ctrl-o</code> 移动到上次编辑位置，可以跨文件操作</p></li> <li><p><code>ctrl-i</code> 回到最新编辑位置</p></li> <li><p><code>shift+*</code> 向下跳转到同名单词位置</p></li> <li><p><code>shift+#</code> 向上跳转到同名单词位置</p></li></ul> <h3 id="选择"><a href="#选择" class="header-anchor">#</a> 选择</h3> <ul><li><code>vt]</code> 选择到]，不包含]</li> <li><code>va]</code> 选择到]， 包含]</li> <li><code>*</code>命令：按下<code>*</code>命令会向下查找光标所在位置的下一个相同单词，并将其选中</li> <li><code>#</code>命令：按下<code>#</code>命令会向上查找光标所在位置的上一个相同单词，并将其选中</li> <li><code>g*n</code>命令：按下<code>g*n</code>命令会向下查找所有相同的单词，并将其一次性选中</li> <li><code>g#n</code>命令：按下<code>g#n</code>命令会向上查找所有相同的单词，并将其一次性选中</li> <li>Ctrl + d: 选择相同单词</li></ul> <h3 id="剪切"><a href="#剪切" class="header-anchor">#</a> 剪切</h3> <ul><li><code>x</code> 删除当前光标所在处的字符</li> <li><code>X</code> 删除当前光标左边的字符</li> <li><code>d</code> 删除单词</li> <li><code>dd</code> 删除当前行并鼠标移动到下一行；</li> <li><code>5dd</code> 删除从光标开始处的 5 行代码</li> <li><code>dgg</code> 删除从光标到文本开头</li> <li><code>dG</code> 删除从光标到文本结尾</li> <li><code>nx</code> 删除n个字符</li> <li><code>nd</code> 删除n行</li> <li><code>dnw</code> 删除n个单词</li> <li><code>d0</code> 删除到行首</li> <li><code>d$</code> 删除到行尾</li> <li><code>dw/db/de</code> 反向删除单词、正向删除单词</li> <li><code>ggdG</code> 删除全部</li> <li><code>D</code> 删除当前行并鼠标在当前行</li> <li><code>dfa</code> 删除从当前光标到光标后面的第一个a字符之间的内容</li> <li><code>d%</code> 删除函数体</li> <li><code>dt{char}</code> 删除光标到字符中间内容</li> <li><code>d2t{char}</code> 删除直到遇到第2个字符</li> <li><code>diw</code> 正向删除整个单词</li> <li><code>daw</code> 正向删除整个单词，包含左右空格边界</li> <li><code>di{</code> 删除花扩号内容,不包含}</li> <li><code>dit</code> 删除 HTML 标签内容</li></ul> <h3 id="删除修改"><a href="#删除修改" class="header-anchor">#</a> 删除修改</h3> <ul><li><code>cw</code> 正向删除从光标处到单词结尾并进入插入模式</li> <li><code>ce</code> 正向删除从光标处到单词结尾并进入插入模式</li> <li><code>cb</code> 反向删除单词并进入插入模式</li> <li><code>cc</code> 删除一整行并进入插入模式</li> <li><code>C</code> 删除当前行并鼠标在当前行，进入插入模式</li> <li><code>R</code> 进入替换模式</li> <li><code>c0</code> 删除到行首，并进入插入模式</li> <li><code>c$</code> 删除到行尾，并进入插入模式</li> <li><code>ct{char}</code> 删除光标到字符中间内容，并进入插入模式</li> <li><code>ciw</code> 正向删除整个单词并进入插入模式</li> <li><code>caw</code> 正向删除整个单词并进入编辑，包含左右空格边界</li> <li><code>ci{</code> 删除花扩号内容,不包含}</li> <li><code>cit</code> 删除 HTML 标签内容，并进入插入模式</li></ul> <h3 id="编辑修改"><a href="#编辑修改" class="header-anchor">#</a> 编辑修改</h3> <ul><li><code>ysiw'</code> 单词加引号</li> <li><code>ysiwt h2</code> 添加h2标签</li> <li><code>dst</code> 删除标签</li> <li><code>yss'</code> 整行加引号</li> <li><code>ds'</code> 删除引号</li> <li><code>cs&quot;'</code> 替换双引号为单引号</li> <li><code>cS&quot;'</code> 整行替换双引号为单引号</li> <li><code>shift+i</code> 批量编辑</li></ul> <h3 id="查找"><a href="#查找" class="header-anchor">#</a> 查找</h3> <ul><li><code>t/F/f{char}</code> 行内搜索，;查找下一个，,查找上一个</li> <li><code>2f{char}</code> 向右查找第2个字符</li> <li><code>2F{char}</code> 向左查找第2个字符</li> <li><code>/xx</code> 可以查找某个单词xx，n查找下一个，N查找上一个</li> <li><code>?xx</code> 可以反向查找</li> <li><code>%</code> 跳转到匹配的块如 }、)、]</li></ul> <h3 id="替换"><a href="#替换" class="header-anchor">#</a> 替换</h3> <ul><li><code>:%s/xx/xx</code> 替换第一个</li> <li><code>:%s/xx/xx/g</code> 替换当前行</li> <li><code>:%s/xx/xx/g</code> 替换全部</li> <li><code>:1,6 s/xx/xx/g</code> 替换1~6行的xx</li> <li><code>:%s/old/new/gc</code> 替换全部，并提示是否进行替换</li> <li><code>xp</code> 交换当前字母与后一个字母的位置</li> <li><code>u/U</code> 将可视模式下选择的字母全改成大写/小写字母</li> <li><code>r{char}</code> 修改光标字符</li> <li><code>R{chars}</code> 修改多个光标字符</li> <li><code>ddp</code> 调换当前行和下一行</li></ul> <h3 id="复制"><a href="#复制" class="header-anchor">#</a> 复制</h3> <ul><li><code>y</code> 复制</li> <li><code>yfa</code> 拷贝从当前光标到光标后面的第一个a字符之间的内容.</li> <li><code>y%</code> 复制函数体</li> <li><code>nyy</code> 复制多行</li> <li><code>ggyG</code> 拷贝全部</li></ul> <h3 id="粘贴"><a href="#粘贴" class="header-anchor">#</a> 粘贴</h3> <ul><li><code>p</code> 粘贴</li> <li><code>yyp</code>复制当前行并粘贴</li></ul> <h3 id="撤销"><a href="#撤销" class="header-anchor">#</a> 撤销</h3> <ul><li><code>u</code> 撤销命令</li> <li><code>ctrl + r</code> 重做撤销命令</li></ul> <h3 id="窗口管理"><a href="#窗口管理" class="header-anchor">#</a> 窗口管理</h3> <ul><li><code>vim -On file1 file2</code> 左右分屏打开文件</li> <li><code>:vsp file</code> 左右分屏打开文件</li> <li><code>:sp file</code> 上下分屏打开文件</li> <li><code>ctrl +w v</code> 左右分屏当前文件</li> <li><code>ctrl +w s</code> 上下分屏当前文件</li> <li><code>ctrl +w c</code> 关闭当前窗口</li> <li><code>ctrl +w o</code> 关闭其它窗口</li> <li><code>ctrl +w l/j/k/w</code> 切换窗口</li> <li><code>ctrl +w w</code> 窗口间循环切换</li> <li><code>ctrl +w x</code> 窗口互换</li> <li><code>ctrl +w H</code> 从水平布局到垂直布局</li> <li><code>ctrl +w J</code> 从垂直布局到水平布局</li> <li><code>:vertical resize 80</code> 设置宽度 80%</li> <li><code>:resize 80</code>  设置高度 80%</li></ul> <p>可以在配置文件中定义热键，来简化窗口操作操作</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;分屏热键
+nmap sl :set splitright&lt;CR&gt;:vsplit&lt;CR&gt;
+nmap sh :set nosplitright&lt;CR&gt;:vsplit&lt;CR&gt;
+nmap sk :set nosplitbelow&lt;CR&gt;:split&lt;CR&gt;
+nmap sj :set splitbelow&lt;CR&gt;:split&lt;CR&gt;
+</code></pre></div><h3 id="标签页管理"><a href="#标签页管理" class="header-anchor">#</a> 标签页管理</h3> <ul><li><code>vim -p file1 file2</code> tab标签打开文件</li> <li><code>:tabnew</code> 打开新的tab</li> <li><code>:tabclose</code> 关闭当前的tab</li> <li><code>:tabonly</code> 关闭所有其他的tab</li> <li><code>:tabprev</code> 前一个tab</li> <li><code>:tabnext</code> 后一个tab</li></ul> <p>修改配置文件来定义键盘映射会让操作变得方便</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;============标签管理============
+map tt :tabe&lt;CR&gt;
+map tj :-tabnext&lt;CR&gt;
+map tk :+tabnext&lt;CR&gt;
+</code></pre></div><h3 id="多行注释"><a href="#多行注释" class="header-anchor">#</a> 多行注释</h3> <div class="language- extra-class"><pre class="language-text"><code>1. 进入命令行模式，按ctrl + v进入 visual block模式（可视快模式），然后按j, 或者k选中多行，把需要注释的行标记起来
+2. 按大写字母I，再插入注释符，例如//
+3. 按esc键过会儿就会全部注释了
+</code></pre></div><h3 id="取消多行注释"><a href="#取消多行注释" class="header-anchor">#</a> 取消多行注释</h3> <div class="language- extra-class"><pre class="language-text"><code>1. 进入命令行模式，按ctrl + v进入 visual block模式（可视快模式），按小写字母l横向选中列的个数，例如 // 需要选中2列
+2. 按字母j，或者k选中注释符号
+3. 按d键就可全部取消注释
+</code></pre></div><h3 id="缩进"><a href="#缩进" class="header-anchor">#</a> 缩进</h3> <ul><li><code>:m,n &gt;</code> 指定行缩进</li> <li><code>:m,n &lt;</code> 指定行反缩进</li> <li><code>gg&lt;G</code> 全部缩进</li> <li><code>gg&gt;G</code> 全部反缩进</li></ul> <h3 id="折叠"><a href="#折叠" class="header-anchor">#</a> 折叠</h3> <ul><li><code>zc</code> 折叠代码块</li> <li><code>zo</code> 展开代码块</li> <li><code>zC</code> 折叠所有代码块</li> <li><code>zO</code> 展开所有代码块</li></ul> <h2 id="插件"><a href="#插件" class="header-anchor">#</a> 插件</h2> <h3 id="对齐"><a href="#对齐" class="header-anchor">#</a> 对齐</h3> <div class="language- extra-class"><pre class="language-text"><code>,a=
+</code></pre></div><h2 id="键盘映射"><a href="#键盘映射" class="header-anchor">#</a> 键盘映射</h2> <p>可以对按键布局进行自定义设置</p> <p>nmap 为 normal 模式
+imap 为 insert 模式</p> <p><code>&lt;LEADER&gt;</code>为前缀键，let mapleader=&quot; &quot; 将 LEADER 定义为空格
+C 为 ctrl 键如 <code>&lt;C-b&gt;</code> 指 ctrl+b&quot;</p> <div class="language- extra-class"><pre class="language-text"><code>&quot; ============ 键盘映射
+let mapleader=&quot; &quot;
+nmap ge :CocCommand explorer
+nmap S :w &lt;CR&gt;
+nmap Q :q &lt;CR&gt;
+nmap &lt;C-p&gt; :FZF &lt;CR&gt;
+nmap H &lt;Home&gt;
+nmap L &lt;End&gt;
+imap jj &lt;Esc&gt;
+
+&quot; ============ 分屏
+nmap &lt;LEADER&gt;vh :vsplit&lt;CR&gt;
+nmap &lt;LEADER&gt;vj :split&lt;CR&gt;
+nmap &lt;LEADER&gt;w &lt;C-w&gt;
+
+&quot; ============ 文件树
+nmap &lt;C-b&gt; ge &lt;CR&gt;
+</code></pre></div><h2 id="实战"><a href="#实战" class="header-anchor">#</a> 实战</h2> <h3 id="如何快速编辑"><a href="#如何快速编辑" class="header-anchor">#</a> 如何快速编辑</h3> <div class="language- extra-class"><pre class="language-text"><code>var r = alg.Rider{
+            ID         string `xlsx:&quot;id&quot;`
+            Name       string `xlsx:&quot;name&quot;`
+            Type       int    `xlsx:&quot;type&quot;`
+        }
+
+var r = alg.Rider{
+            ID: data.ID,         
+            Name: data.Name,
+            Type: data.Type
+        }
+        
+        
+// 单词部分修改
+TimeSeqSorters
+TimeSeqSorters
+
+timeSeqSorters
+timeSeqSorters
+
+// 单词增加引号
+</code></pre></div><h3 id="如何快速填充"><a href="#如何快速填充" class="header-anchor">#</a> 如何快速填充</h3> <div class="language- extra-class"><pre class="language-text"><code>return alg.Job{
+		OrderID: task.OrderID,
+		IsSoonArrival: task.IsSoonArrival,
+		IsShareOrder: task.IsShareOrder,
+}
+</code></pre></div><h2 id="我的配置"><a href="#我的配置" class="header-anchor">#</a> 我的配置</h2> <p><a href="https://github.com/caijinlin/dotfiles/blob/master/vim/vimrc" target="_blank" rel="noopener noreferrer">vimrc<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/23.cecba155.js" defer></script>
+  </body>
+</html>

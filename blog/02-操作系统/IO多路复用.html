@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/35.7f7e9e68.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/16.88b2bba9.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/20.1a2d20ad.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/23.cecba155.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/39.2232fa48.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.ccb47428.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/68.558e1980.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/75.a770d2f2.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/82.5b4da558.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#目录" class="sidebar-link">目录</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_1、什么是io多路复用" class="sidebar-link">1、什么是IO多路复用</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_2、为什么有io多路复用机制" class="sidebar-link">2、为什么有IO多路复用机制?</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#同步阻塞-bio" class="sidebar-link">同步阻塞（BIO）</a></li><li class="sidebar-sub-header"><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#同步非阻塞-nio" class="sidebar-link">同步非阻塞（NIO）</a></li><li class="sidebar-sub-header"><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#io多路复用-现在的做法" class="sidebar-link">IO多路复用（现在的做法）</a></li></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_3、io多路复用的三种实现方式" class="sidebar-link">3、IO多路复用的三种实现方式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_4、select函数接口" class="sidebar-link">4、select函数接口</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_5、select使用示例" class="sidebar-link">5、select使用示例</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_6、select缺点" class="sidebar-link">6、select缺点</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_7、poll函数接口" class="sidebar-link">7、poll函数接口</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_8、poll使用示例" class="sidebar-link">8、poll使用示例</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_9、poll缺点" class="sidebar-link">9、poll缺点</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_10、epoll函数接口" class="sidebar-link">10、epoll函数接口</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_11、epoll使用示例" class="sidebar-link">11、epoll使用示例</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_12、epoll缺点" class="sidebar-link">12、epoll缺点</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_13、epoll-lt-与-et模式的区别" class="sidebar-link">13、epoll LT 与 ET模式的区别</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_14、epoll应用" class="sidebar-link">14、epoll应用</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_15、select-poll-epoll之间的区别" class="sidebar-link">15、select/poll/epoll之间的区别</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_16、完整代码示例" class="sidebar-link">16、完整代码示例</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8.html#_17、高频面试题" class="sidebar-link">17、高频面试题</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>看完下面这些，高频面试题你都会答了吧</p></blockquote> <h2 id="目录"><a href="#目录" class="header-anchor">#</a> 目录</h2> <p>1、什么是IO多路复用?<br>
+2、为什么出现IO多路复用机制?<br>
+3、IO多路复用的三种实现方式<br>
+4、select函数接口<br>
+5、select使用示例<br>
+6、select缺点<br>
+7、poll函数接口<br>
+8、poll使用示例<br>
+9、poll缺点<br>
+10、epoll函数接口<br>
+11、epoll使用示例<br>
+12、epoll缺点<br>
+13、epoll LT 与 ET模式的区别<br>
+14、epoll应用<br>
+15、select/poll/epoll之间的区别<br>
+16、IO多路复用完整代码实现<br>
+17、高频面试题 <br></p> <h2 id="_1、什么是io多路复用"><a href="#_1、什么是io多路复用" class="header-anchor">#</a> 1、什么是IO多路复用</h2> <p><strong>定义</strong></p> <ul><li>IO多路复用是一种同步IO模型，实现一个线程可以监视多个文件句柄；一旦某个文件句柄就绪，就能够通知应用程序进行相应的读写操作；没有文件句柄就绪时会阻塞应用程序，交出cpu。多路是指网络连接，复用指的是同一个线程</li></ul> <h2 id="_2、为什么有io多路复用机制"><a href="#_2、为什么有io多路复用机制" class="header-anchor">#</a> 2、为什么有IO多路复用机制?</h2> <blockquote><p>没有IO多路复用机制时，有BIO、NIO两种实现方式，但有一些问题</p></blockquote> <h3 id="同步阻塞-bio"><a href="#同步阻塞-bio" class="header-anchor">#</a> 同步阻塞（BIO）</h3> <ul><li>服务端采用单线程，当accept一个请求后，在recv或send调用阻塞时，将无法accept其他请求（必须等上一个请求处recv或send完），<code>无法处理并发</code></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 伪代码描述
+while(1) {
+  // accept阻塞
+  client_fd = accept(listen_fd)
+  fds.append(client_fd)
+  for (fd in fds) {
+    // recv阻塞（会影响上面的accept）
+    if (recv(fd)) {
+      // logic
+    }
+  }  
+}
+</code></pre></div><ul><li>服务器端采用多线程，当accept一个请求后，开启线程进行recv，可以完成并发处理，但随着请求数增加需要增加系统线程，<code>大量的线程占用很大的内存空间，并且线程切换会带来很大的开销，10000个线程真正发生读写事件的线程数不会超过20%，每次accept都开一个线程也是一种资源浪费</code></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 伪代码描述
+while(1) {
+  // accept阻塞
+  client_fd = accept(listen_fd)
+  // 开启线程read数据（fd增多导致线程数增多）
+  new Thread func() {
+    // recv阻塞（多线程不影响上面的accept）
+    if (recv(fd)) {
+      // logic
+    }
+  }  
+}
+
+</code></pre></div><h3 id="同步非阻塞-nio"><a href="#同步非阻塞-nio" class="header-anchor">#</a> 同步非阻塞（NIO）</h3> <ul><li>服务器端当accept一个请求后，加入fds集合，每次轮询一遍fds集合recv(非阻塞)数据，没有数据则立即返回错误，<code>每次轮询所有fd（包括没有发生读写事件的fd）会很浪费cpu</code></li></ul> <div class="language- extra-class"><pre class="language-text"><code>setNonblocking(listen_fd)
+// 伪代码描述
+while(1) {
+  // accept非阻塞（cpu一直忙轮询）
+  client_fd = accept(listen_fd)
+  if (client_fd != null) {
+    // 有人连接
+    fds.append(client_fd)
+  } else {
+    // 无人连接
+  }  
+  for (fd in fds) {
+    // recv非阻塞
+    setNonblocking(client_fd)
+    // recv 为非阻塞命令
+    if (len = recv(fd) &amp;&amp; len &gt; 0) {
+      // 有读写数据
+      // logic
+    } else {
+       无读写数据
+    }
+  }  
+}
+</code></pre></div><h3 id="io多路复用-现在的做法"><a href="#io多路复用-现在的做法" class="header-anchor">#</a> IO多路复用（现在的做法）</h3> <ul><li>服务器端采用单线程通过select/epoll等系统调用获取fd列表，遍历有事件的fd进行accept/recv/send，使其能<code>支持更多的并发连接请求</code></li></ul> <div class="language- extra-class"><pre class="language-text"><code>fds = [listen_fd]
+// 伪代码描述
+while(1) {
+  // 通过内核获取有读写事件发生的fd，只要有一个则返回，无则阻塞
+  // 整个过程只在调用select、poll、epoll这些调用的时候才会阻塞，accept/recv是不会阻塞
+  for (fd in select(fds)) {
+    if (fd == listen_fd) {
+        client_fd = accept(listen_fd)
+        fds.append(client_fd)
+    } elseif (len = recv(fd) &amp;&amp; len != -1) { 
+      // logic
+    }
+  }  
+}
+</code></pre></div><h2 id="_3、io多路复用的三种实现方式"><a href="#_3、io多路复用的三种实现方式" class="header-anchor">#</a> 3、IO多路复用的三种实现方式</h2> <ul><li>select</li> <li>poll</li> <li>epoll</li></ul> <h2 id="_4、select函数接口"><a href="#_4、select函数接口" class="header-anchor">#</a> 4、select函数接口</h2> <div class="language- extra-class"><pre class="language-text"><code>​#include &lt;sys/select.h&gt;
+#include &lt;sys/time.h&gt;
+
+#define FD_SETSIZE 1024
+#define NFDBITS (8 * sizeof(unsigned long))
+#define __FDSET_LONGS (FD_SETSIZE/NFDBITS)
+
+// 数据结构 (bitmap)
+typedef struct {
+    unsigned long fds_bits[__FDSET_LONGS];
+} fd_set;
+
+// API
+int select(
+    int max_fd, 
+    fd_set *readset, 
+    fd_set *writeset, 
+    fd_set *exceptset, 
+    struct timeval *timeout
+)                              // 返回值就绪描述符的数目
+
+FD_ZERO(int fd, fd_set* fds)   // 清空集合
+FD_SET(int fd, fd_set* fds)    // 将给定的描述符加入集合
+FD_ISSET(int fd, fd_set* fds)  // 判断指定描述符是否在集合中 
+FD_CLR(int fd, fd_set* fds)    // 将给定的描述符从文件中删除  
+</code></pre></div><h2 id="_5、select使用示例"><a href="#_5、select使用示例" class="header-anchor">#</a> 5、select使用示例</h2> <div class="language- extra-class"><pre class="language-text"><code>int main() {
+  /*
+   * 这里进行一些初始化的设置，
+   * 包括socket建立，地址的设置等,
+   */
+
+  fd_set read_fs, write_fs;
+  struct timeval timeout;
+  int max = 0;  // 用于记录最大的fd，在轮询中时刻更新即可
+
+  // 初始化比特位
+  FD_ZERO(&amp;read_fs);
+  FD_ZERO(&amp;write_fs);
+
+  int nfds = 0; // 记录就绪的事件，可以减少遍历的次数
+  while (1) {
+    // 阻塞获取
+    // 每次需要把fd从用户态拷贝到内核态
+    nfds = select(max + 1, &amp;read_fd, &amp;write_fd, NULL, &amp;timeout);
+    // 每次需要遍历所有fd，判断有无读写事件发生
+    for (int i = 0; i &lt;= max &amp;&amp; nfds; ++i) {
+      if (i == listenfd) {
+         --nfds;
+         // 这里处理accept事件
+         FD_SET(i, &amp;read_fd);//将客户端socket加入到集合中
+      }
+      if (FD_ISSET(i, &amp;read_fd)) {
+        --nfds;
+        // 这里处理read事件
+      }
+      if (FD_ISSET(i, &amp;write_fd)) {
+         --nfds;
+        // 这里处理write事件
+      }
+    }
+  }
+</code></pre></div><h2 id="_6、select缺点"><a href="#_6、select缺点" class="header-anchor">#</a> 6、select缺点</h2> <ul><li>单个进程所打开的FD是有限制的，通过FD_SETSIZE设置，默认1024（bitmap默认1024）</li> <li>每次调用select，都需要把fd集合从用户态拷贝到内核态，这个开销在fd很多时会很大</li> <li>对socket扫描时是线性扫描，采用轮询的方法，效率较低（高并发时）</li></ul> <h2 id="_7、poll函数接口"><a href="#_7、poll函数接口" class="header-anchor">#</a> 7、poll函数接口</h2> <blockquote><p>poll与select相比，只是没有fd的限制，其它基本一样</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>#include &lt;poll.h&gt;
+// 数据结构
+struct pollfd {
+    int fd;                         // 需要监视的文件描述符
+    short events;                   // 需要内核监视的事件
+    short revents;                  // 实际发生的事件
+};
+
+// API
+int poll(struct pollfd fds[], nfds_t nfds, int timeout);
+</code></pre></div><h2 id="_8、poll使用示例"><a href="#_8、poll使用示例" class="header-anchor">#</a> 8、poll使用示例</h2> <div class="language- extra-class"><pre class="language-text"><code>// 先宏定义长度
+#define MAX_POLLFD_LEN 4096  
+
+int main() {
+  /*
+   * 在这里进行一些初始化的操作，
+   * 比如初始化数据和socket等。
+   */
+
+  int nfds = 0;
+  pollfd fds[MAX_POLLFD_LEN];
+  memset(fds, 0, sizeof(fds));
+  fds[0].fd = listenfd;
+  fds[0].events = POLLRDNORM;
+  int max  = 0;  // 队列的实际长度，是一个随时更新的，也可以自定义其他的
+  int timeout = 0;
+
+  int current_size = max;
+  while (1) {
+    // 阻塞获取
+    // 每次需要把fd从用户态拷贝到内核态
+    nfds = poll(fds, max+1, timeout);
+    if (fds[0].revents &amp; POLLRDNORM) {
+        // 这里处理accept事件
+        connfd = accept(listenfd);
+        //将新的描述符添加到读描述符集合中
+    }
+    // 每次需要遍历所有fd，判断有无读写事件发生
+    for (int i = 1; i &lt; max; ++i) {     
+      if (fds[i].revents &amp; POLLRDNORM) { 
+         sockfd = fds[i].fd
+         if ((n = read(sockfd, buf, MAXLINE)) &lt;= 0) {
+            // 这里处理read事件
+            if (n == 0) {
+                close(sockfd);
+                fds[i].fd = -1;
+            }
+         } else {
+             // 这里处理write事件     
+         }
+         if (--nfds &lt;= 0) {
+            break;       
+         }   
+      }
+    }
+  }
+</code></pre></div><h2 id="_9、poll缺点"><a href="#_9、poll缺点" class="header-anchor">#</a> 9、poll缺点</h2> <ul><li>每次调用poll，都需要把fd集合从用户态拷贝到内核态，这个开销在fd很多时会很大</li> <li>对socket扫描时是线性扫描，采用轮询的方法，效率较低（高并发时）</li></ul> <h2 id="_10、epoll函数接口"><a href="#_10、epoll函数接口" class="header-anchor">#</a> 10、epoll函数接口</h2> <div class="language- extra-class"><pre class="language-text"><code>#include &lt;sys/epoll.h&gt;
+
+// 数据结构
+// 每一个epoll对象都有一个独立的eventpoll结构体
+// 用于存放通过epoll_ctl方法向epoll对象中添加进来的事件
+// epoll_wait检查是否有事件发生时，只需要检查eventpoll对象中的rdlist双链表中是否有epitem元素即可
+struct eventpoll {
+    /*红黑树的根节点，这颗树中存储着所有添加到epoll中的需要监控的事件*/
+    struct rb_root  rbr;
+    /*双链表中则存放着将要通过epoll_wait返回给用户的满足条件的事件*/
+    struct list_head rdlist;
+};
+
+// API
+
+int epoll_create(int size); // 内核中间加一个 ep 对象，把所有需要监听的 socket 都放到 ep 对象中
+int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event); // epoll_ctl 负责把 socket 增加、删除到内核红黑树
+int epoll_wait(int epfd, struct epoll_event * events, int maxevents, int timeout);// epoll_wait 负责检测可读队列，没有可读 socket 则阻塞进程
+</code></pre></div><h2 id="_11、epoll使用示例"><a href="#_11、epoll使用示例" class="header-anchor">#</a> 11、epoll使用示例</h2> <div class="language- extra-class"><pre class="language-text"><code>int main(int argc, char* argv[])
+{
+   /*
+   * 在这里进行一些初始化的操作，
+   * 比如初始化数据和socket等。
+   */
+
+    // 内核中创建ep对象
+    epfd=epoll_create(256);
+    // 需要监听的socket放到ep中
+    epoll_ctl(epfd,EPOLL_CTL_ADD,listenfd,&amp;ev);
+ 
+    while(1) {
+      // 阻塞获取
+      nfds = epoll_wait(epfd,events,20,0);
+      for(i=0;i&lt;nfds;++i) {
+          if(events[i].data.fd==listenfd) {
+              // 这里处理accept事件
+              connfd = accept(listenfd);
+              // 接收新连接写到内核对象中
+              epoll_ctl(epfd,EPOLL_CTL_ADD,connfd,&amp;ev);
+          } else if (events[i].events&amp;EPOLLIN) {
+              // 这里处理read事件
+              read(sockfd, BUF, MAXLINE);
+              //读完后准备写
+              epoll_ctl(epfd,EPOLL_CTL_MOD,sockfd,&amp;ev);
+          } else if(events[i].events&amp;EPOLLOUT) {
+              // 这里处理write事件
+              write(sockfd, BUF, n);
+              //写完后准备读
+              epoll_ctl(epfd,EPOLL_CTL_MOD,sockfd,&amp;ev);
+          }
+      }
+    }
+    return 0;
+}
+</code></pre></div><h2 id="_12、epoll缺点"><a href="#_12、epoll缺点" class="header-anchor">#</a> 12、epoll缺点</h2> <ul><li>epoll只能工作在linux下</li></ul> <h2 id="_13、epoll-lt-与-et模式的区别"><a href="#_13、epoll-lt-与-et模式的区别" class="header-anchor">#</a> 13、epoll LT 与 ET模式的区别</h2> <ul><li>epoll有EPOLLLT和EPOLLET两种触发模式，LT是默认的模式，ET是“高速”模式。</li> <li>LT模式下，只要这个fd还有数据可读，每次 epoll_wait都会返回它的事件，提醒用户程序去操作</li> <li>ET模式下，它只会提示一次，直到下次再有数据流入之前都不会再提示了，无论fd中是否还有数据可读。所以在ET模式下，read一个fd的时候一定要把它的buffer读完，或者遇到EAGAIN错误</li></ul> <h2 id="_14、epoll应用"><a href="#_14、epoll应用" class="header-anchor">#</a> 14、epoll应用</h2> <ul><li>redis</li> <li>nginx</li></ul> <h2 id="_15、select-poll-epoll之间的区别"><a href="#_15、select-poll-epoll之间的区别" class="header-anchor">#</a> 15、select/poll/epoll之间的区别</h2> <table><thead><tr><th></th> <th>select</th> <th>poll</th> <th>epoll</th></tr></thead> <tbody><tr><td>数据结构</td> <td>bitmap</td> <td>数组</td> <td>红黑树</td></tr> <tr><td>最大连接数</td> <td>1024</td> <td>无上限</td> <td>无上限</td></tr> <tr><td>fd拷贝</td> <td>每次调用select拷贝</td> <td>每次调用poll拷贝</td> <td>fd首次调用epoll_ctl拷贝，每次调用epoll_wait不拷贝</td></tr> <tr><td>工作效率</td> <td>轮询：O(n)</td> <td>轮询：O(n)</td> <td>回调：O(1)</td></tr></tbody></table> <h2 id="_16、完整代码示例"><a href="#_16、完整代码示例" class="header-anchor">#</a> 16、完整代码示例</h2> <p><a href="https://github.com/caijinlin/learning-pratice/tree/master/linux/io" target="_blank" rel="noopener noreferrer">https://github.com/caijinlin/learning-pratice/tree/master/linux/io<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="_17、高频面试题"><a href="#_17、高频面试题" class="header-anchor">#</a> 17、高频面试题</h2> <ul><li>什么是IO多路复用?</li> <li>nginx/redis 所使用的IO模型是什么？</li> <li>select、poll、epoll之间的区别</li> <li>epoll 水平触发（LT）与 边缘触发（ET）的区别？</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/35.7f7e9e68.js" defer></script>
+  </body>
+</html>

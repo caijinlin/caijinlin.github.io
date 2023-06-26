@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. 什么是事务 | Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/68.558e1980.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/16.88b2bba9.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/20.1a2d20ad.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/23.cecba155.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/35.7f7e9e68.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/39.2232fa48.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.ccb47428.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/75.a770d2f2.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/82.5b4da558.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>1. 什么是事务</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/05-MySQL/04_%E4%BA%8B%E5%8A%A1/%E4%BA%8B%E5%8A%A1.html#_1-什么是事务" class="sidebar-link">1. 什么是事务</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/05-MySQL/04_%E4%BA%8B%E5%8A%A1/%E4%BA%8B%E5%8A%A1.html#_2-事务的四大特性" class="sidebar-link">2. 事务的四大特性</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/05-MySQL/04_%E4%BA%8B%E5%8A%A1/%E4%BA%8B%E5%8A%A1.html#_3-事务的四大隔离级别" class="sidebar-link">3. 事务的四大隔离级别</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/05-MySQL/04_%E4%BA%8B%E5%8A%A1/%E4%BA%8B%E5%8A%A1.html#_4-事务并发存在的问题" class="sidebar-link">4. 事务并发存在的问题</a></li><li class="sidebar-sub-header"><a href="/blog/05-MySQL/04_%E4%BA%8B%E5%8A%A1/%E4%BA%8B%E5%8A%A1.html#_5-事务四大隔离级别实验" class="sidebar-link">5. 事务四大隔离级别实验</a></li><li class="sidebar-sub-header"><a href="/blog/05-MySQL/04_%E4%BA%8B%E5%8A%A1/%E4%BA%8B%E5%8A%A1.html#_6-mvcc" class="sidebar-link">6. MVCC</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1-什么是事务"><a href="#_1-什么是事务" class="header-anchor">#</a> 1. 什么是事务</h2> <p>事务由事务开始(begin transaction)和事务结束(end transaction)之间执行的全体操作组成。在关系数据库中，一个事务可以是一组SQL语句或整个程序。</p> <h2 id="_2-事务的四大特性"><a href="#_2-事务的四大特性" class="header-anchor">#</a> 2. 事务的四大特性</h2> <h2 id="_3-事务的四大隔离级别"><a href="#_3-事务的四大隔离级别" class="header-anchor">#</a> 3. 事务的四大隔离级别</h2> <p>Read Uncommitted（RU）</p> <div class="language- extra-class"><pre><code>   在该隔离级别，所有事务都可以看到其他未提交事务的执行结果。本隔离级别很少用于实际应用，因为它的性能也不比其他级别好多少。读取未提交的数据，也被称之为脏读（Dirty Read）。
+</code></pre></div><p>Read Committed（RC）</p> <div class="language- extra-class"><pre><code>   这是大多数数据库系统的默认隔离级别（但不是MySQL默认的）。它满足了隔离的简单定义：一个事务只能看见已经提交事务所做的改变。这种隔离级别 也支持所谓的不可重复读（Nonrepeatable Read），因为同一事务的其他实例在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。
+</code></pre></div><p>Repeatable Read（RR）</p> <div class="language- extra-class"><pre><code>   这是MySQL的默认事务隔离级别，它确保同一事务的多个实例在并发读取数据时，会看到同样的数据行。不过理论上，这会导致另一个棘手的问题：幻读 （Phantom Read）。简单的说，幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。
+</code></pre></div><p>Serializable（可串行化）
+这是最高的隔离级别，它通过强制事务排序，使之不可能相互冲突，从而解决幻读问题。简言之，它是在每个读的数据行上加上共享锁。在这个级别，可能导致大量的超时现象和锁竞争。</p> <h3 id="_4-事务并发存在的问题"><a href="#_4-事务并发存在的问题" class="header-anchor">#</a> 4. 事务并发存在的问题</h3> <p>脏读是某一事务读取了另一个事务未提交的脏数据，而不可重复读则是读取了其他事务提交的数据。需要注意的是在某些情况下不可重复读并不是问题</p> <p>幻读和不可重复读都是读取了另一条已经提交的事务(这点就脏读不同)，所不同的是不可重复读可能发生在update,delete操作中，而幻读发生在insert操作中</p> <p>脏读(Drity Read)：某个事务已更新一份数据，另一个事务在此时读取了同一份数据，由于某些原因，前一个RollBack了操作，则后一个事务所读取的数据就会是不正确的。</p> <p>不可重复读(Non-repeatable read):在一个事务的两次查询之中数据不一致，这可能是两次查询过程中间插入了一个事务更新的原有的数据。</p> <p>幻读(Phantom Read):在一个事务的两次查询中数据笔数不一致，例如有一个事务查询了几列(Row)数据，而另一个事务却在此时插入了新的几列数据，先前的事务在接下来的查询中，就会发现有几列数据是它先前所没有的</p> <h3 id="_5-事务四大隔离级别实验"><a href="#_5-事务四大隔离级别实验" class="header-anchor">#</a> 5. 事务四大隔离级别实验</h3> <h4 id="查看隔离级别"><a href="#查看隔离级别" class="header-anchor">#</a> 查看隔离级别</h4> <div class="language- extra-class"><pre class="language-text"><code>select @@global.tx_isolation,@@tx_isolation; 
+// 存储引擎系统级的隔离级别和会话级的隔离级别
+</code></pre></div><h4 id="设置隔离级别"><a href="#设置隔离级别" class="header-anchor">#</a> 设置隔离级别</h4> <div class="language- extra-class"><pre class="language-text"><code>隔离级别：READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE
+set global transaction isolation level READ COMMITTED; //全局的
+set session transaction isolation level READ COMMITTED; //当前会话
+</code></pre></div><h3 id="_6-mvcc"><a href="#_6-mvcc" class="header-anchor">#</a> 6. MVCC</h3> <h4 id="快照读"><a href="#快照读" class="header-anchor">#</a> 快照读</h4> <h4 id="当前读"><a href="#当前读" class="header-anchor">#</a> 当前读</h4> <p>ABA问题</p> <p>怎么解决脏读、不可重复读、幻读这些问题呢？其实有两种可选的解决方案：</p> <p>方案一：读操作利用多版本并发控制（MVCC），写操作进行加锁。</p> <p>普通的SELECT语句在READ COMMITTED和REPEATABLE READ隔离级别下会使用到MVCC读取记录。在READ COMMITTED隔离级别下，一个事务在执行过程中每次执行SELECT操作时都会生成一个ReadView，ReadView的存在本身就保证了事务不可以读取到未提交的事务所做的更改，也就是避免了脏读现象；REPEATABLE READ隔离级别下，一个事务在执行过程中只有第一次执行SELECT操作才会生成一个ReadView，之后的SELECT操作都复用这个ReadView，这样也就避免了不可重复读和幻读的问题</p> <p>方案二：读、写操作都采用加锁的方式。</p> <p>脏读的产生是因为当前事务读取了另一个未提交事务写的一条记录，如果另一个事务在写记录的时候就给这条记录加锁，那么当前事务就无法继续读取该记录了，所以也就不会有脏读问题的产生了。不可重复读的产生是因为当前事务先读取一条记录，另外一个事务对该记录做了改动之后并提交之后，当前事务再次读取时会获得不同的值，如果在当前事务读取记录时就给该记录加锁，那么另一个事务就无法修改该记录，自然也不会发生不可重复读了。我们说幻读问题的产生是因为当前事务读取了一个范围的记录，然后另外的事务向该范围内插入了新记录，当前事务再次读取该范围的记录时发现了新插入的新记录，我们把新插入的那些记录称之为幻影记录。采用加锁的方式解决幻读问题就有那么一丢丢麻烦了，因为当前事务在第一次读取记录时那些幻影记录并不存在，所以读取的时候加锁就有点尴尬 —— 因为你并不知道给谁加锁，没关系，这难不倒设计InnoDB的大叔的，我们稍后揭晓答案，稍安勿躁</p> <p>采用MVCC方式的话，读-写操作彼此并不冲突，性能更高，采用加锁方式的话，读-写操作彼此需要排队执行，影响性能。一般情况下我们当然愿意采用MVCC来解决读-写操作并发执行的问题，但是业务在某些特殊情况下，要求必须采用加锁的方式执行，那也是没有办法的事</p> <p>快照d</p> <p>如何解决幻读</p> <p>幻读和不可重复读都是读取了另一条已经提交的事务(这点就脏读不同)，所不同的是不可重复读可能发生在update,delete操作中，而幻读发生在insert操作中</p> <ul><li><p>使用串行化读的隔离级别</p></li> <li><p>MVCC+next-key locks：next-key locks由record locks(索引加锁) 和 gap locks(间隙锁，每次锁住的不光是需要使用的数据，还会锁住这些数据附近的数据) 行锁和间隙锁，合称Next-Key Lock</p></li> <li><p>不加锁拥有更高的并发性</p></li></ul> <p>https://developer.aliyun.com/article/74671
+https://juejin.cn/post/6844903799534911496?utm_source=coffeephp.com%3Futm_source%3Dcoffeephp.com#heading-10</p> <p>https://database.51cto.com/art/202004/613900.htm</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/68.558e1980.js" defer></script>
+  </body>
+</html>

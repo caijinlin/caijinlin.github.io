@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>锁的 7 大分类 | Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/39.2232fa48.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/16.88b2bba9.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/20.1a2d20ad.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/23.cecba155.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/35.7f7e9e68.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.ccb47428.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/68.558e1980.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/75.a770d2f2.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/82.5b4da558.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>锁的 7 大分类</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%94%81%E7%9A%84%E5%88%86%E7%B1%BB.html#锁的-7-大分类" class="sidebar-link">锁的 7 大分类</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%94%81%E7%9A%84%E5%88%86%E7%B1%BB.html#偏向锁-轻量级锁-重量级锁" class="sidebar-link">偏向锁/轻量级锁/重量级锁</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%94%81%E7%9A%84%E5%88%86%E7%B1%BB.html#可重入锁-非可重入锁" class="sidebar-link">可重入锁/非可重入锁</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%94%81%E7%9A%84%E5%88%86%E7%B1%BB.html#共享锁-独占锁" class="sidebar-link">共享锁/独占锁</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%94%81%E7%9A%84%E5%88%86%E7%B1%BB.html#公平锁-非公平锁" class="sidebar-link">公平锁/非公平锁</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%94%81%E7%9A%84%E5%88%86%E7%B1%BB.html#悲观锁-乐观锁" class="sidebar-link">悲观锁/乐观锁</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%94%81%E7%9A%84%E5%88%86%E7%B1%BB.html#自旋锁-非自旋锁" class="sidebar-link">自旋锁/非自旋锁</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/02-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%94%81%E7%9A%84%E5%88%86%E7%B1%BB.html#可中断锁-不可中断锁" class="sidebar-link">可中断锁/不可中断锁</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="锁的-7-大分类"><a href="#锁的-7-大分类" class="header-anchor">#</a> 锁的 7 大分类</h2> <p>需要首先指出的是，这些多种多样的分类，是评价一个事物的多种标准，比如评价一个城市，标准有人口多少、经济发达与否、城市面积大小等。而一个城市可能同时占据多个标准，以北京而言，人口多，经济发达，同时城市面积还很大。</p> <p>同理，对于 Java 中的锁而言，一把锁也有可能同时占有多个标准，符合多种分类，比如 ReentrantLock 既是可中断锁，又是可重入锁。</p> <p>根据分类标准我们把锁分为以下 7 大类别，分别是：</p> <ul><li>偏向锁/轻量级锁/重量级锁；</li> <li>可重入锁/非可重入锁；</li> <li>共享锁/独占锁；</li> <li>公平锁/非公平锁；</li> <li>悲观锁/乐观锁；</li> <li>自旋锁/非自旋锁；</li> <li>可中断锁/不可中断锁。</li></ul> <p>以上是常见的分类标准，下面我们来逐一介绍它们的含义。</p> <h2 id="偏向锁-轻量级锁-重量级锁"><a href="#偏向锁-轻量级锁-重量级锁" class="header-anchor">#</a> 偏向锁/轻量级锁/重量级锁</h2> <p>第一种分类是偏向锁/轻量级锁/重量级锁，这三种锁特指 synchronized 锁的状态，通过在对象头中的 mark word 来表明锁的状态。</p> <ul><li>偏向锁</li></ul> <p>如果自始至终，对于这把锁都不存在竞争，那么其实就没必要上锁，只需要打个标记就行了，这就是偏向锁的思想。一个对象被初始化后，还没有任何线程来获取它的锁时，那么它就是可偏向的，当有第一个线程来访问它并尝试获取锁的时候，它就将这个线程记录下来，以后如果尝试获取锁的线程正是偏向锁的拥有者，就可以直接获得锁，开销很小，性能最好。</p> <ul><li>轻量级锁</li></ul> <p>JVM 开发者发现在很多情况下，synchronized 中的代码是被多个线程交替执行的，而不是同时执行的，也就是说并不存在实际的竞争，或者是只有短时间的锁竞争，用 CAS 就可以解决，这种情况下，用完全互斥的重量级锁是没必要的。轻量级锁是指当锁原来是偏向锁的时候，被另一个线程访问，说明存在竞争，那么偏向锁就会升级为轻量级锁，线程会通过自旋的形式尝试获取锁，而不会陷入阻塞。</p> <ul><li>重量级锁</li></ul> <p>重量级锁是互斥锁，它是利用操作系统的同步机制实现的，所以开销相对比较大。当多个线程直接有实际竞争，且锁竞争时间长的时候，轻量级锁不能满足需求，锁就会膨胀为重量级锁。重量级锁会让其他申请却拿不到锁的线程进入阻塞状态。</p> <p><img src="https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/Java%20%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%2078%20%E8%AE%B2-%E5%AE%8C/assets/CgpOIF35yCGAGFBbAAAO9n9VgTQ034.png" alt="img"></p> <p>你可以发现锁升级的路径：无锁→偏向锁→轻量级锁→重量级锁。</p> <p>综上所述，偏向锁性能最好，可以避免执行 CAS 操作。而轻量级锁利用自旋和 CAS 避免了重量级锁带来的线程阻塞和唤醒，性能中等。重量级锁则会把获取不到锁的线程阻塞，性能最差。</p> <h2 id="可重入锁-非可重入锁"><a href="#可重入锁-非可重入锁" class="header-anchor">#</a> 可重入锁/非可重入锁</h2> <p>第 2 个分类是可重入锁和非可重入锁。可重入锁指的是线程当前已经持有这把锁了，能在不释放这把锁的情况下，再次获取这把锁。同理，不可重入锁指的是虽然线程当前持有了这把锁，但是如果想再次获取这把锁，也必须要先释放锁后才能再次尝试获取。</p> <p>对于可重入锁而言，最典型的就是 ReentrantLock 了，正如它的名字一样，reentrant 的意思就是可重入，它也是 Lock 接口最主要的一个实现类。</p> <h2 id="共享锁-独占锁"><a href="#共享锁-独占锁" class="header-anchor">#</a> 共享锁/独占锁</h2> <p>第 3 种分类标准是共享锁和独占锁。共享锁指的是我们同一把锁可以被多个线程同时获得，而独占锁指的就是，这把锁只能同时被一个线程获得。我们的读写锁，就最好地诠释了共享锁和独占锁的理念。读写锁中的读锁，是共享锁，而写锁是独占锁。读锁可以被同时读，可以同时被多个线程持有，而写锁最多只能同时被一个线程持有。</p> <h2 id="公平锁-非公平锁"><a href="#公平锁-非公平锁" class="header-anchor">#</a> 公平锁/非公平锁</h2> <p>第 4 种分类是公平锁和非公平锁。公平锁的公平的含义在于如果线程现在拿不到这把锁，那么线程就都会进入等待，开始排队，在等待队列里等待时间长的线程会优先拿到这把锁，有先来先得的意思。而非公平锁就不那么“完美”了，它会在一定情况下，忽略掉已经在排队的线程，发生插队现象。</p> <h2 id="悲观锁-乐观锁"><a href="#悲观锁-乐观锁" class="header-anchor">#</a> 悲观锁/乐观锁</h2> <p>第 5 种分类是悲观锁，以及与它对应的乐观锁。悲观锁的概念是在获取资源之前，必须先拿到锁，以便达到“独占”的状态，当前线程在操作资源的时候，其他线程由于不能拿到锁，所以其他线程不能来影响我。而乐观锁恰恰相反，它并不要求在获取资源前拿到锁，也不会锁住资源；相反，乐观锁利用 CAS 理念，在不独占资源的情况下，完成了对资源的修改。</p> <h2 id="自旋锁-非自旋锁"><a href="#自旋锁-非自旋锁" class="header-anchor">#</a> 自旋锁/非自旋锁</h2> <p>第 6 种分类是自旋锁与非自旋锁。自旋锁的理念是如果线程现在拿不到锁，并不直接陷入阻塞或者释放 CPU 资源，而是开始利用循环，不停地尝试获取锁，这个循环过程被形象地比喻为“自旋”，就像是线程在“自我旋转”。相反，非自旋锁的理念就是没有自旋的过程，如果拿不到锁就直接放弃，或者进行其他的处理逻辑，例如去排队、陷入阻塞等。</p> <h2 id="可中断锁-不可中断锁"><a href="#可中断锁-不可中断锁" class="header-anchor">#</a> 可中断锁/不可中断锁</h2> <p>第 7 种分类是可中断锁和不可中断锁。在 Java 中，synchronized 关键字修饰的锁代表的是不可中断锁，一旦线程申请了锁，就没有回头路了，只能等到拿到锁以后才能进行其他的逻辑处理。而我们的 ReentrantLock 是一种典型的可中断锁，例如使用 lockInterruptibly 方法在获取锁的过程中，突然不想获取了，那么也可以在中断之后去做其他的事情，不需要一直傻等到获取到锁才离开。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/39.2232fa48.js" defer></script>
+  </body>
+</html>

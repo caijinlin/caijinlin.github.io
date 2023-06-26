@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>算法介绍 | Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/82.5b4da558.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/16.88b2bba9.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/20.1a2d20ad.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/23.cecba155.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/35.7f7e9e68.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/39.2232fa48.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.ccb47428.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/68.558e1980.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/75.a770d2f2.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>算法介绍</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#算法介绍" class="sidebar-link">算法介绍</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#应用场景" class="sidebar-link">应用场景</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#同类算法" class="sidebar-link">同类算法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#算法流程" class="sidebar-link">算法流程</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#算法实现" class="sidebar-link">算法实现</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#算法参数" class="sidebar-link">算法参数</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#状态管理器" class="sidebar-link">状态管理器</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#最优解管理器" class="sidebar-link">最优解管理器</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#算子管理器" class="sidebar-link">算子管理器</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#选择算子" class="sidebar-link">选择算子</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#获取邻域解" class="sidebar-link">获取邻域解</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#更新当前解" class="sidebar-link">更新当前解</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#更新最优解" class="sidebar-link">更新最优解</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#更新算子的分数" class="sidebar-link">更新算子的分数</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#更新算子的权重" class="sidebar-link">更新算子的权重</a></li><li class="sidebar-sub-header"><a href="/blog/07-%E7%AE%97%E6%B3%95/%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%A7%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95.html#重置当前解" class="sidebar-link">重置当前解</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="算法介绍"><a href="#算法介绍" class="header-anchor">#</a> 算法介绍</h2> <p><em>自适应大邻域搜索</em>算法（Adaptive Large Neighborhood Search），简称（ALNS），是由Ropke与Pisinger在2006年提出的一种启发式方法，其在邻域搜索的基础上增加了对算子的作用效果的衡量，使算法能够自动选择好的算子对解进行破坏与修复，从而有一定几率得到更好的解。</p> <h2 id="应用场景"><a href="#应用场景" class="header-anchor">#</a> 应用场景</h2> <p>1.外卖场景：搜索订单分配骑手的最优方案</p> <p>2.派单场景：搜索订单分配司机的最优方案</p> <p>3.车辆路径规划问题</p> <h2 id="同类算法"><a href="#同类算法" class="header-anchor">#</a> 同类算法</h2> <p>在邻域搜索算法中，有的算法可以只使用一种邻域，如<strong>模拟退火算法</strong>，因此它仅仅搜索了解空间的一小部分，找到全局最优的概率较小，它的优势之一是可以避免陷入局部最优；</p> <p>而有的算法可以使用多种算子，如<strong>变邻域搜索算法</strong>（VNS），它通过在当前解的多个邻域中寻找更满意的解，能够大大提高算法在解空间的搜索范围，但是它在使用算子时盲目地将每种算子形成的邻域结构都搜索一遍，缺少了一些启发式信息的指导；</p> <p>而<strong>自适应大邻域搜索算法</strong>就弥补了这种不足，这种算法根据算子的历史表现与使用次数选择下一次迭代使用的算子，通过算子间的相互竞争来生成当前解的邻域结构，而在这种结构中有很大概率能够找到更好的解；</p> <h2 id="算法流程"><a href="#算法流程" class="header-anchor">#</a> 算法流程</h2> <p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/alns_demo.png" alt=""></p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token number">1.</span> 生成初始解，当前解X0 <span class="token operator">=</span> 初始解，最优解X1 <span class="token operator">=</span> X0
+
+<span class="token number">2.</span> 重复以下步骤进行迭代直到停止准则
+
+   <span class="token number">2.1</span> 根据算子权重选择破坏与修复算子，并更新算子使用次数
+
+   <span class="token number">2.2</span> 破坏算子和修复算子依次对当前解操作得到新解X2
+
+   <span class="token number">2.3</span> 更新当前解 
+
+   <span class="token operator">-</span> 如f<span class="token punctuation">(</span>X2<span class="token punctuation">)</span> <span class="token operator">&lt;</span> f<span class="token punctuation">(</span>X0<span class="token punctuation">)</span>，则X0 <span class="token operator">=</span> X2
+   <span class="token operator">-</span> 如f<span class="token punctuation">(</span>X2<span class="token punctuation">)</span> <span class="token operator">&gt;</span> f<span class="token punctuation">(</span>X0<span class="token punctuation">)</span>，则以一定的概率接受该解作为当前解
+
+   <span class="token number">2.4</span> 更新最优解 
+
+   <span class="token operator">-</span> 如f<span class="token punctuation">(</span>X2<span class="token punctuation">)</span> <span class="token operator">&lt;</span> f<span class="token punctuation">(</span>X1<span class="token punctuation">)</span>，则X1 <span class="token operator">=</span> X2
+
+   <span class="token number">2.5</span> 更新算子的分数
+
+   <span class="token number">2.6</span> 更新算子的权重
+
+   <span class="token number">2.7</span> 重置当前解
+
+<span class="token number">3.</span> 返回最优解X1
+</code></pre></div><p>每次迭代就是从初始解中删除N个点，然后依次将删除的点重新插入，得到一个新的解，即当前解的邻域解；重复上述迭代过程，得到一个成本（cost）最低的一个解，即最优解。</p> <p><strong>ALNS会为每个destroy和repair算子分配一个权重，通过该权重从而控制每个destroy和repair算子在搜索期间使用的频率。</strong> 在搜索的过程中，<strong>ALNS</strong>会对各个destroy和repair方法的权重进行<strong>动态调整</strong>，以便获得更好的邻域和解。</p> <p><strong>ALNS通过使用多种destroy和repair算子，然后再根据这些destroy和repair算子生成的解的质量，选择那些表现好的destroy和repair算子，再次生成邻域进行搜索</strong></p> <h2 id="算法实现"><a href="#算法实现" class="header-anchor">#</a> 算法实现</h2> <p>算法本身由算法参数、当前解、状态管理器、算子管理器、最优解管理器组成</p> <p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/AlnsProccess.png" alt=""></p> <h3 id="算法参数"><a href="#算法参数" class="header-anchor">#</a> 算法参数</h3> <blockquote><p>算法执行过程中一些初始化参数</p></blockquote> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">type</span> Parameters <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    MaxExecTime          <span class="token builtin">int</span>         <span class="token string">`json:&quot;max_exec_time&quot;`</span> <span class="token comment">// 最长执行时间（单位s）</span>
+    TimeSegmentsIt       <span class="token builtin">int</span>         <span class="token string">`json:&quot;time_segments_iteration&quot;`</span> <span class="token comment">// 重新计算权重迭代次数</span>
+    ReloadFrequency      <span class="token builtin">int</span>         <span class="token string">`json:&quot;reload_frequency&quot;`</span> <span class="token comment">// 重置当前解的迭代次数</span>
+    Sigma1               <span class="token builtin">int</span>         <span class="token string">`json:&quot;sigma1&quot;`</span> <span class="token comment">// 算子提升最优解 增加分数</span>
+    Sigma2               <span class="token builtin">int</span>         <span class="token string">`json:&quot;sigma2&quot;`</span> <span class="token comment">// 算子提升当前解 增加分数</span>
+    Sigma3               <span class="token builtin">int</span>         <span class="token string">`json:&quot;sigma3&quot;`</span> <span class="token comment">// 算子更新当前解 增加分数</span>
+    Rho                  <span class="token builtin">float64</span>     <span class="token string">`json:&quot;rho&quot;`</span>    <span class="token comment">// 重新计算算子权重的系数</span>
+    MinimumWeight        <span class="token builtin">float64</span>     <span class="token string">`json:&quot;min_weight&quot;`</span> <span class="token comment">// 最小权重值</span>
+    MaximumWeight        <span class="token builtin">float64</span>     <span class="token string">`json:&quot;max_weight&quot;`</span> <span class="token comment">// 最大权重值</span>
+    MaxTemperature       <span class="token builtin">float64</span>     <span class="token string">`json:&quot;max_temperature&quot;`</span> <span class="token comment">// 最大温度</span>
+    MinTemperature       <span class="token builtin">float64</span>     <span class="token string">`json:&quot;min_temperature&quot;`</span> <span class="token comment">// 最小温度</span>
+    TemperatureAlpha     <span class="token builtin">float64</span>     <span class="token string">`json:&quot;temperature_alpha&quot;`</span> <span class="token comment">// 降温系数</span>
+    MaxNoImproveRatio    <span class="token builtin">float64</span>     <span class="token string">`json:&quot;max_no_improve_ratio&quot;`</span> <span class="token comment">// 最大没有提升解的迭代次数占比（超过停止）</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最大温度 * math.pow(降温系数, n) &lt; 最小温度，max(n)即为<strong>最大迭代次数</strong>，超过最大迭代次数停止</p> <p>最大迭代次数 * MaxNoImproveRatio = 最大无改善最优解的迭代次数，超过最大无改善最优解的迭代次数停止</p> <p>超过最长执行时间停止</p> <h3 id="状态管理器"><a href="#状态管理器" class="header-anchor">#</a> 状态管理器</h3> <blockquote><p>管理计数的状态变量</p></blockquote> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">type</span> Status <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 迭代次数：Id of the iteration corresponding to this status.</span>
+	IterationId <span class="token builtin">int</span>
+
+	<span class="token comment">// 迭代次数中得到可行解的迭代次数：Number of iteration solution avaliable</span>
+	NIterationAvaliable <span class="token builtin">int</span>
+
+	<span class="token comment">// 距离上一次改善最优解的迭代次数：Number of iteration since the last improvement of the BKS</span>
+	NIterationWithoutImprovement <span class="token builtin">int</span>
+
+	<span class="token comment">// 距离上一次重置当前解后改善最优解的迭代次数：Number of iteration since the last improvement of the BKS</span>
+	<span class="token comment">// or the last reload of the best known solution.</span>
+	NIterationWithoutImprovementSinceLastReload <span class="token builtin">int</span>
+
+	<span class="token comment">// 没有改善当前解的迭代次数： Number of iterations since the last improvement of the current</span>
+	<span class="token comment">// solution.</span>
+	NIterationWithoutImprovementCurrent <span class="token builtin">int</span>
+
+	<span class="token comment">// 没有更新当前解的迭代次数：Number of iterations without transition.</span>
+	NIterationWithoutTransition <span class="token builtin">int</span>
+
+	<span class="token comment">// 重置当前解的迭代次数：Number of iterations with reload current solution</span>
+	NIterationReloadCurrent <span class="token builtin">int</span>
+
+	<span class="token comment">// 更新最优解的迭代次数：Number of iterations with update best solution</span>
+	NIterationUpdateBest <span class="token builtin">int</span>
+
+	<span class="token comment">// 更新算子权重的迭代次数：Number of iterations with recopute weights</span>
+	NIterationRecomputeWeights <span class="token builtin">int</span>
+
+	<span class="token comment">// 当前解是否是最优解： Indicate if a new best solution has been obtained.</span>
+	NewBestSolution <span class="token builtin">int</span>
+
+	<span class="token comment">// 是否更新了当前解：Indicate if the new solution has been accepted as the</span>
+	<span class="token comment">// current solution.</span>
+	AcceptedAsCurrentSolution <span class="token builtin">int</span>
+
+	<span class="token comment">// 是否提升了当前解：Indicate if the new solution improve the current solution.</span>
+	ImproveCurrentSolution <span class="token builtin">int</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="最优解管理器"><a href="#最优解管理器" class="header-anchor">#</a> 最优解管理器</h3> <blockquote><p>管理最优解</p></blockquote> <p>更新最优解</p> <p>获取最优解</p> <h3 id="算子管理器"><a href="#算子管理器" class="header-anchor">#</a> 算子管理器</h3> <blockquote><p>算子管理类，提供如下接口</p></blockquote> <p>添加摧毁算子</p> <p>添加修复算子</p> <p>选择摧毁算子</p> <p>选择修复算子</p> <p>更新算子分数</p> <p>更新算子权重</p> <p>更新算子调用次数</p> <h3 id="选择算子"><a href="#选择算子" class="header-anchor">#</a> 选择算子</h3> <p>算子管理器根据算子权重选择破坏算子与修复算子</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>m <span class="token operator">*</span>OperatorManager<span class="token punctuation">)</span> <span class="token function">selectOperator</span><span class="token punctuation">(</span>vecOp <span class="token punctuation">[</span><span class="token punctuation">]</span>IOperator<span class="token punctuation">,</span> sumW <span class="token builtin">float64</span><span class="token punctuation">)</span> IOperator <span class="token punctuation">{</span>
+	randomVal <span class="token operator">:=</span> rand<span class="token punctuation">.</span><span class="token function">Float64</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	randomWeightPos <span class="token operator">:=</span> randomVal <span class="token operator">*</span> sumW
+	cumulSum <span class="token operator">:=</span> <span class="token number">0.0</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>vecOp<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		cumulSum <span class="token operator">+=</span> vecOp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">GetWeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">if</span> cumulSum <span class="token operator">&gt;=</span> randomWeightPos <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> m<span class="token punctuation">.</span>noise <span class="token punctuation">{</span>
+				vecOp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">SetNoise</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+				vecOp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">UnsetNoise</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span>
+			vecOp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">IncreaseNumberOfCalls</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 更新算子使用次数</span>
+			<span class="token keyword">return</span> vecOp<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">return</span> vecOp<span class="token punctuation">[</span><span class="token function">len</span><span class="token punctuation">(</span>vecOp<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="获取邻域解"><a href="#获取邻域解" class="header-anchor">#</a> 获取邻域解</h3> <p>先使用破坏算子进行删除，然后使用修复算子将删除的进行添加</p> <div class="language- extra-class"><pre class="language-text"><code>func (s *AlnsProcess) generateNeighborSolution(repair IRepairOperator, destroy IDestroyOperator) *alg.Solution {
+	// 从局部最优中生成新解
+	neighbor := s.currentSolution.CopySolution()
+	// destroy solution
+	removeJobs := destroy.DestroySolution(neighbor)
+	// repair solution
+	repair.RepairSolution(neighbor, removeJobs)
+
+	return neighbor
+}
+</code></pre></div><h3 id="更新当前解"><a href="#更新当前解" class="header-anchor">#</a> 更新当前解</h3> <p>新解 &lt; 当前解，一定接受</p> <p>新解 &gt; 当前解，根据温度与成本变化值随机接受</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>a <span class="token operator">*</span>Acceptance<span class="token punctuation">)</span> <span class="token function">TransitionAccepted</span><span class="token punctuation">(</span>currentSolution<span class="token punctuation">,</span> newSolution <span class="token operator">*</span>alg<span class="token punctuation">.</span>Solution<span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 降温</span>
+	a<span class="token punctuation">.</span>temperature <span class="token operator">*=</span> a<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>TemperatureAlpha
+
+	<span class="token keyword">if</span> newSolution<span class="token punctuation">.</span>SolutionCost <span class="token operator">&lt;</span> currentSolution<span class="token punctuation">.</span>SolutionCost <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		difference <span class="token operator">:=</span> newSolution<span class="token punctuation">.</span>SolutionCost <span class="token operator">-</span> currentSolution<span class="token punctuation">.</span>SolutionCost
+		random <span class="token operator">:=</span> rand<span class="token punctuation">.</span><span class="token function">Float64</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> math<span class="token punctuation">.</span><span class="token function">Exp</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.0</span><span class="token operator">*</span>difference<span class="token operator">/</span>a<span class="token punctuation">.</span>temperature<span class="token punctuation">)</span> <span class="token operator">&gt;=</span> random
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="更新最优解"><a href="#更新最优解" class="header-anchor">#</a> 更新最优解</h3> <p>新解 &lt; 最优解，一定接受</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>AlnsProcess<span class="token punctuation">)</span> <span class="token function">updateBestSoution</span><span class="token punctuation">(</span>newSol <span class="token operator">*</span>alg<span class="token punctuation">.</span>Solution<span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
+	bestSolution <span class="token operator">:=</span> s<span class="token punctuation">.</span>bestSolManager<span class="token punctuation">.</span><span class="token function">GetBestSolution</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	accept <span class="token operator">:=</span> <span class="token boolean">false</span>
+	<span class="token keyword">if</span> newSol<span class="token punctuation">.</span>SolutionCost <span class="token operator">&lt;</span> bestSolution<span class="token punctuation">.</span>SolutionCost <span class="token punctuation">{</span>
+		accept <span class="token operator">=</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">if</span> accept <span class="token punctuation">{</span>
+		s<span class="token punctuation">.</span>bestSolManager<span class="token punctuation">.</span><span class="token function">AddNewBestSolution</span><span class="token punctuation">(</span>newSol<span class="token punctuation">)</span>
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NewBestSolution <span class="token operator">=</span> TRUE
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationWithoutImprovement <span class="token operator">=</span> s<span class="token punctuation">.</span>nIterationsWithoutImprovement
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationWithoutImprovementSinceLastReload <span class="token operator">=</span> <span class="token number">0</span>
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationUpdateBest <span class="token operator">+=</span> <span class="token number">1</span>
+		<span class="token keyword">return</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NewBestSolution <span class="token operator">=</span> FALSE
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationWithoutImprovement <span class="token operator">=</span> s<span class="token punctuation">.</span>nIterationsWithoutImprovement
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationWithoutImprovementSinceLastReload<span class="token operator">++</span>
+		<span class="token keyword">return</span> <span class="token boolean">false</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="更新算子的分数"><a href="#更新算子的分数" class="header-anchor">#</a> 更新算子的分数</h3> <blockquote><p>根据新解的质量，给当前使用算子加上不同的分数</p></blockquote> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>m <span class="token operator">*</span>OperatorManager<span class="token punctuation">)</span> <span class="token function">UpdateScores</span><span class="token punctuation">(</span>des IDestroyOperator<span class="token punctuation">,</span> rep IRepairOperator<span class="token punctuation">,</span> status <span class="token operator">*</span>Status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 新解是最优解</span>
+	<span class="token keyword">if</span> status<span class="token punctuation">.</span>NewBestSolution <span class="token operator">==</span> TRUE <span class="token punctuation">{</span>
+		rep<span class="token punctuation">.</span><span class="token function">SetScore</span><span class="token punctuation">(</span>rep<span class="token punctuation">.</span><span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">float64</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Sigma1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		des<span class="token punctuation">.</span><span class="token function">SetScore</span><span class="token punctuation">(</span>des<span class="token punctuation">.</span><span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">float64</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Sigma1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		m<span class="token punctuation">.</span>perfRepairOperatorsWithNoise <span class="token operator">+=</span> <span class="token number">1</span>
+		m<span class="token punctuation">.</span>perfRepairOperatorsWithoutNoise <span class="token operator">+=</span> <span class="token number">1</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 新解改善了当前解</span>
+	<span class="token keyword">if</span> status<span class="token punctuation">.</span>ImproveCurrentSolution <span class="token operator">==</span> TRUE <span class="token punctuation">{</span>
+		rep<span class="token punctuation">.</span><span class="token function">SetScore</span><span class="token punctuation">(</span>rep<span class="token punctuation">.</span><span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">float64</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Sigma2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		des<span class="token punctuation">.</span><span class="token function">SetScore</span><span class="token punctuation">(</span>des<span class="token punctuation">.</span><span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">float64</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Sigma2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		m<span class="token punctuation">.</span>perfRepairOperatorsWithNoise <span class="token operator">+=</span> <span class="token number">1</span>
+		m<span class="token punctuation">.</span>perfRepairOperatorsWithoutNoise <span class="token operator">+=</span> <span class="token number">1</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 新解更新了当前解</span>
+	<span class="token keyword">if</span> status<span class="token punctuation">.</span>ImproveCurrentSolution <span class="token operator">==</span> FALSE <span class="token operator">&amp;&amp;</span>
+		status<span class="token punctuation">.</span>AcceptedAsCurrentSolution <span class="token operator">==</span> TRUE <span class="token operator">&amp;&amp;</span>
+		status<span class="token punctuation">.</span>AlreadyKnownSolution <span class="token operator">==</span> FALSE <span class="token punctuation">{</span>
+		rep<span class="token punctuation">.</span><span class="token function">SetScore</span><span class="token punctuation">(</span>rep<span class="token punctuation">.</span><span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">float64</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Sigma3<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		des<span class="token punctuation">.</span><span class="token function">SetScore</span><span class="token punctuation">(</span>des<span class="token punctuation">.</span><span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">float64</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Sigma3<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		m<span class="token punctuation">.</span>perfRepairOperatorsWithNoise <span class="token operator">+=</span> <span class="token number">1</span>
+		m<span class="token punctuation">.</span>perfRepairOperatorsWithoutNoise <span class="token operator">+=</span> <span class="token number">1</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">if</span> m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Noise <span class="token punctuation">{</span>
+		performanceRepairOperatorsGlobal <span class="token operator">:=</span> <span class="token number">0.0</span>
+		performanceRepairOperatorsGlobal <span class="token operator">+=</span> m<span class="token punctuation">.</span>perfRepairOperatorsWithNoise
+		performanceRepairOperatorsGlobal <span class="token operator">+=</span> m<span class="token punctuation">.</span>perfRepairOperatorsWithoutNoise
+
+		randomVal <span class="token operator">:=</span> rand<span class="token punctuation">.</span><span class="token function">Float64</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		randomWeightPos <span class="token operator">:=</span> randomVal <span class="token operator">*</span> performanceRepairOperatorsGlobal
+		m<span class="token punctuation">.</span>noise <span class="token operator">=</span> <span class="token punctuation">(</span>randomWeightPos <span class="token operator">&lt;</span> performanceRepairOperatorsGlobal<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="更新算子的权重"><a href="#更新算子的权重" class="header-anchor">#</a> 更新算子的权重</h3> <p>每迭代TimeSegmentsIt次，更新所有算子的权重，新的权重和算子分数、算子调用次数等有关</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>m <span class="token operator">*</span>OperatorManager<span class="token punctuation">)</span> <span class="token function">recomputeWeight</span><span class="token punctuation">(</span>op IOperator<span class="token punctuation">,</span> sumW <span class="token operator">*</span><span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	prevWeight <span class="token operator">:=</span> op<span class="token punctuation">.</span><span class="token function">GetWeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token operator">*</span>sumW <span class="token operator">-=</span> prevWeight
+
+	currentScore <span class="token operator">:=</span> op<span class="token punctuation">.</span><span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	nbCalls <span class="token operator">:=</span> op<span class="token punctuation">.</span><span class="token function">GetNumberOfCallsSinceLastEvaluation</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	newWeight <span class="token operator">:=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">-</span>m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Rho<span class="token punctuation">)</span><span class="token operator">*</span>prevWeight <span class="token operator">+</span> m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>Rho<span class="token operator">*</span><span class="token punctuation">(</span><span class="token function">float64</span><span class="token punctuation">(</span>nbCalls<span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">float64</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>TimeSegmentsIt<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span>currentScore
+
+	<span class="token comment">// We ensure that the weight is within the bounds.</span>
+	<span class="token keyword">if</span> newWeight <span class="token operator">&gt;</span> m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>MaximumWeight <span class="token punctuation">{</span>
+		newWeight <span class="token operator">=</span> m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>MaximumWeight
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">if</span> newWeight <span class="token operator">&lt;</span> m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>MinimumWeight <span class="token punctuation">{</span>
+		newWeight <span class="token operator">=</span> m<span class="token punctuation">.</span>parameters<span class="token punctuation">.</span>MinimumWeight
+	<span class="token punctuation">}</span>
+
+	<span class="token operator">*</span>sumW <span class="token operator">+=</span> newWeight
+	op<span class="token punctuation">.</span><span class="token function">SetWeight</span><span class="token punctuation">(</span>newWeight<span class="token punctuation">)</span>
+	op<span class="token punctuation">.</span><span class="token function">ResetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	op<span class="token punctuation">.</span><span class="token function">ResetNumberOfCalls</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="重置当前解"><a href="#重置当前解" class="header-anchor">#</a> 重置当前解</h3> <p>每迭代 ReloadFrequency 次，重置当前解</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token comment">// 重置当前解（防止陷入局部最优解）</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>AlnsProcess<span class="token punctuation">)</span> <span class="token function">reloadCurrentSolution</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>alg<span class="token punctuation">.</span>Solution <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationWithoutImprovementSinceLastReload <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span>
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationWithoutImprovementSinceLastReload<span class="token operator">%</span>s<span class="token punctuation">.</span>params<span class="token punctuation">.</span>ReloadFrequency <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationWithoutImprovementSinceLastReload <span class="token operator">=</span> <span class="token number">0</span>
+		s<span class="token punctuation">.</span>status<span class="token punctuation">.</span>NIterationReloadCurrent <span class="token operator">+=</span> <span class="token number">1</span>
+		<span class="token keyword">return</span> s<span class="token punctuation">.</span>bestSolManager<span class="token punctuation">.</span><span class="token function">GetBestSolution</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">CopySolution</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">return</span> s<span class="token punctuation">.</span>currentSolution
+<span class="token punctuation">}</span>
+</code></pre></div><p>https://cloud.tencent.com/developer/article/1523308</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/82.5b4da558.js" defer></script>
+  </body>
+</html>

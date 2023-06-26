@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/50.ccb47428.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/16.88b2bba9.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/20.1a2d20ad.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/23.cecba155.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/35.7f7e9e68.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/39.2232fa48.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/68.558e1980.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/75.a770d2f2.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/82.5b4da558.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#hmap结构体" class="sidebar-link">hmap结构体</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#bmap结构体" class="sidebar-link">bmap结构体</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#mapextra结构体" class="sidebar-link">mapextra结构体</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#引用类型" class="sidebar-link">引用类型</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#共享存储空间" class="sidebar-link">共享存储空间</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#遍历顺序随机" class="sidebar-link">遍历顺序随机</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#非线程安全" class="sidebar-link">非线程安全</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#哈希冲突" class="sidebar-link">哈希冲突</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#创建" class="sidebar-link">创建</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#查找" class="sidebar-link">查找</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#赋值" class="sidebar-link">赋值</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#删除" class="sidebar-link">删除</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#扩容-2" class="sidebar-link">扩容</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#迁移-2" class="sidebar-link">迁移</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/04-Golang/4.4_%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Golang%20Channel.html#遍历" class="sidebar-link">遍历</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>本文目录如下，阅读本文后，将一网打尽下面Golang Map相关面试题</p> <p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Map.png" alt=""></p> <h1 id="面试题"><a href="#面试题" class="header-anchor">#</a> 面试题</h1> <ol><li>channel的底层实现原理</li> <li>channel 是否线程安全?</li> <li>nil、关闭的 channel、有数据的 channel，再进行读、写、关闭会怎么样？</li> <li>向 channel 发送数据和从 channel 读数据的流程是什么样的?</li></ol> <h1 id="实现原理"><a href="#实现原理" class="header-anchor">#</a> 实现原理</h1> <p>Go中的map是一个指针，占用8个字节，指向hmap结构体;  源码<code>src/runtime/map.go</code>中可以看到map的底层结构</p> <p>每个map的底层结构是hmap，hmap包含若干个结构为bmap的bucket数组。每个bucket底层都采用链表结构。接下来，我们来详细看下map的结构</p> <p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/map_mem_struct.png" alt=""></p> <h2 id="hmap结构体"><a href="#hmap结构体" class="header-anchor">#</a> hmap结构体</h2> <div class="language- extra-class"><pre class="language-text"><code>// A header for a Go map.
+type hmap struct {
+    count     int 
+    // 代表哈希表中的元素个数，调用len(map)时，返回的就是该字段值。
+    flags     uint8 
+    // 状态标志，下文常量中会解释四种状态位含义。
+    B         uint8  
+    // buckets（桶）的对数log_2
+    // 如果B=5，则buckets数组的长度 = 2^5=32，意味着有32个桶
+    noverflow uint16 
+    // 溢出桶的大概数量
+    hash0     uint32 
+    // 哈希种子
+
+    buckets    unsafe.Pointer 
+    // 指向buckets数组的指针，数组大小为2^B，如果元素个数为0，它为nil。
+    oldbuckets unsafe.Pointer 
+    // 如果发生扩容，oldbuckets是指向老的buckets数组的指针，老的buckets数组大小是新的buckets的1/2;非扩容状态下，它为nil。
+    nevacuate  uintptr        
+    // 表示扩容进度，小于此地址的buckets代表已搬迁完成。
+
+    extra *mapextra 
+    // 这个字段是为了优化GC扫描而设计的。当key和value均不包含指针，并且都可以inline时使用。extra是指向mapextra类型的指针。
+ }
+</code></pre></div><h2 id="bmap结构体"><a href="#bmap结构体" class="header-anchor">#</a> bmap结构体</h2> <p><code>bmap</code> 就是我们常说的“桶”，一个桶里面会最多装 8 个 key，这些 key 之所以会落入同一个桶，是因为它们经过哈希计算后，哈希结果是“一类”的，关于key的定位我们在map的查询和插入中详细说明。在桶内，又会根据 key 计算出来的 hash 值的高 8 位来决定 key 到底落入桶内的哪个位置（一个桶内最多有8个位置)。</p> <div class="language- extra-class"><pre class="language-text"><code>// A bucket for a Go map.
+type bmap struct {
+    tophash [bucketCnt]uint8        
+    // len为8的数组
+    // 用来快速定位key是否在这个bmap中
+    // 桶的槽位数组，一个桶最多8个槽位，如果key所在的槽位在tophash中，则代表该key在这个桶中
+}
+//底层定义的常量 
+const (
+    bucketCntBits = 3
+    bucketCnt     = 1 &lt;&lt; bucketCntBits
+    // 一个桶最多8个位置
+）
+
+但这只是表面(src/runtime/hashmap.go)的结构，编译期间会给它加料，动态地创建一个新的结构：
+
+type bmap struct {
+  topbits  [8]uint8
+  keys     [8]keytype
+  values   [8]valuetype
+  pad      uintptr
+  overflow uintptr
+  // 溢出桶
+}
+</code></pre></div><p>bucket内存数据结构可视化如下：</p> <p>注意到 key 和 value 是各自放在一起的，并不是 <code>key/value/key/value/...</code> 这样的形式。源码里说明这样的好处是在某些情况下可以省略掉 padding字段，节省内存空间。</p> <p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/image-20220111201336370.png" alt=""></p> <h2 id="mapextra结构体"><a href="#mapextra结构体" class="header-anchor">#</a> mapextra结构体</h2> <p>当 map 的 key 和 value 都不是指针，并且 size 都小于 128 字节的情况下，会把 bmap 标记为不含指针，这样可以避免 gc 时扫描整个 hmap。但是，我们看 bmap 其实有一个 overflow 的字段，是指针类型的，破坏了 bmap 不含指针的设想，这时会把 overflow 移动到 extra 字段来。</p> <div class="language- extra-class"><pre class="language-text"><code>// mapextra holds fields that are not present on all maps.
+type mapextra struct {
+    // 如果 key 和 value 都不包含指针，并且可以被 inline(&lt;=128 字节)
+    // 就使用 hmap的extra字段 来存储 overflow buckets，这样可以避免 GC 扫描整个 map
+    // 然而 bmap.overflow 也是个指针。这时候我们只能把这些 overflow 的指针
+    // 都放在 hmap.extra.overflow 和 hmap.extra.oldoverflow 中了
+    // overflow 包含的是 hmap.buckets 的 overflow 的 buckets
+    // oldoverflow 包含扩容时的 hmap.oldbuckets 的 overflow 的 bucket
+    overflow    *[]*bmap
+    oldoverflow *[]*bmap
+
+		nextOverflow *bmap	
+	// 指向空闲的 overflow bucket 的指针
+}
+</code></pre></div><h1 id="主要特性"><a href="#主要特性" class="header-anchor">#</a> 主要特性</h1> <h2 id="引用类型"><a href="#引用类型" class="header-anchor">#</a> 引用类型</h2> <p>map是个指针，底层指向hmap，所以是个引用类型</p> <p>golang 有三个常用的高级类型<em>slice</em>、map、channel,  它们都是<em>引用类型</em>，当引用类型作为函数参数时，可能会修改原内容数据。</p> <p>golang 中没有引用传递，只有值和指针传递。所以 map 作为函数实参传递时本质上也是值传递，只不过因为 map 底层数据结构是通过指针指向实际的元素存储空间，在被调函数中修改 map，对调用者同样可见，所以 map 作为函数实参传递时表现出了引用传递的效果。</p> <p>因此，传递 map 时，如果想修改map的内容而不是map本身，函数形参无需使用指针</p> <div class="language- extra-class"><pre class="language-text"><code>func TestSliceFn(t *testing.T) {
+	m := map[string]int{}
+	t.Log(m, len(m))
+	// map[a:1]
+	mapAppend(m, &quot;b&quot;, 2)
+	t.Log(m, len(m))
+	// map[a:1 b:2] 2
+}
+
+func mapAppend(m map[string]int, key string, val int) {
+	m[key] = val
+}
+</code></pre></div><h2 id="共享存储空间"><a href="#共享存储空间" class="header-anchor">#</a> 共享存储空间</h2> <p><em>map</em> 底层数据结构是通过指针指向实际的元素<em>存储空间</em> ，这种情况下，对其中一个map的更改，会影响到其他map</p> <div class="language- extra-class"><pre class="language-text"><code>func TestMapShareMemory(t *testing.T) {
+	m1 := map[string]int{}
+	m2 := m1
+	m1[&quot;a&quot;] = 1
+	t.Log(m1, len(m1))
+	// map[a:1] 1
+	t.Log(m2, len(m2))
+	// map[a:1]
+}
+</code></pre></div><h2 id="遍历顺序随机"><a href="#遍历顺序随机" class="header-anchor">#</a> 遍历顺序随机</h2> <p>map 在没有被修改的情况下，使用 range 多次遍历 map 时输出的 key 和 value 的顺序可能不同。这是 Go 语言的设计者们有意为之，在每次 range 时的顺序被随机化，旨在提示开发者们，Go 底层实现并不保证 map 遍历顺序稳定，请大家不要依赖 range 遍历结果顺序。</p> <p>map 本身是无序的，且遍历时顺序还会被随机化，如果想顺序遍历 map，需要对 map key 先排序，再按照 key 的顺序遍历 map。</p> <div class="language- extra-class"><pre class="language-text"><code>func TestMapRange(t *testing.T) {
+	m := map[int]string{1: &quot;a&quot;, 2: &quot;b&quot;, 3: &quot;c&quot;}
+	t.Log(&quot;first range:&quot;)
+	// 默认无序遍历
+	for i, v := range m {
+		t.Logf(&quot;m[%v]=%v &quot;, i, v)
+	}
+	t.Log(&quot;\nsecond range:&quot;)
+	for i, v := range m {
+		t.Logf(&quot;m[%v]=%v &quot;, i, v)
+	}
+
+	// 实现有序遍历
+	var sl []int
+	// 把 key 单独取出放到切片
+	for k := range m {
+		sl = append(sl, k)
+	}
+	// 排序切片
+	sort.Ints(sl)
+	// 以切片中的 key 顺序遍历 map 就是有序的了
+	for _, k := range sl {
+		t.Log(k, m[k])
+	}
+}
+</code></pre></div><h2 id="非线程安全"><a href="#非线程安全" class="header-anchor">#</a> 非线程安全</h2> <p>map默认是并发不安全的，原因如下：</p> <p>Go 官方在经过了长时间的讨论后，认为 Go map 更应适配典型使用场景（不需要从多个 goroutine 中进行安全访问），而不是为了小部分情况（并发访问），导致大部分程序付出加锁代价（性能），决定了不支持。</p> <p>场景:  2个协程同时读和写，以下程序会出现致命错误：fatal error: concurrent map writes</p> <div class="language- extra-class"><pre class="language-text"><code>func main() {
+    
+	m := make(map[int]int)
+	go func() {
+    				//开一个协程写map
+		for i := 0; i &lt; 10000; i++ {
+    
+			m[i] = i
+		}
+	}()
+
+	go func() {
+    				//开一个协程读map
+		for i := 0; i &lt; 10000; i++ {
+    
+			fmt.Println(m[i])
+		}
+	}()
+
+	//time.Sleep(time.Second * 20)
+	for {
+    
+		;
+	}
+}
+</code></pre></div><p>如果想实现map线程安全，有两种方式：</p> <p>方式一：使用读写锁  <code>map</code> +  <code>sync.RWMutex</code></p> <div class="language- extra-class"><pre class="language-text"><code>func BenchmarkMapConcurrencySafeByMutex(b *testing.B) {
+	var lock sync.Mutex //互斥锁
+	m := make(map[int]int, 0)
+	var wg sync.WaitGroup
+	for i := 0; i &lt; b.N; i++ {
+		wg.Add(1)
+		go func(i int) {
+			defer wg.Done()
+			lock.Lock()
+			defer lock.Unlock()
+			m[i] = i
+		}(i)
+	}
+	wg.Wait()
+	b.Log(len(m), b.N)
+}
+</code></pre></div><p>方式二：使用golang提供的 <code>sync.Map</code></p> <p>sync.map是用读写分离实现的，其思想是空间换时间。和map+RWLock的实现方式相比，它做了一些优化：可以无锁访问read map，而且会优先操作read map，倘若只操作read map就可以满足要求(增删改查遍历)，那就不用去操作write map(它的读写都要加锁)，所以在某些特定场景中它发生锁竞争的频率会远远小于map+RWLock的实现方式。</p> <div class="language- extra-class"><pre class="language-text"><code>func BenchmarkMapConcurrencySafeBySyncMap(b *testing.B) {
+	var m sync.Map
+	var wg sync.WaitGroup
+	for i := 0; i &lt; b.N; i++ {
+		wg.Add(1)
+		go func(i int) {
+			defer wg.Done()
+			m.Store(i, i)
+		}(i)
+	}
+	wg.Wait()
+	b.Log(b.N)
+}
+</code></pre></div><h2 id="哈希冲突"><a href="#哈希冲突" class="header-anchor">#</a> 哈希冲突</h2> <p>golang中map是一个kv对集合。底层使用hash table，用链表来解决冲突 ，出现冲突时，不是每一个key都申请一个结构通过链表串起来，而是以bmap为最小粒度挂载，一个bmap可以放8个kv。在哈希函数的选择上，会在程序启动时，检测 cpu 是否支持 aes，如果支持，则使用 aes hash，否则使用 memhash。</p> <h1 id="常用操作"><a href="#常用操作" class="header-anchor">#</a> 常用操作</h1> <h2 id="创建"><a href="#创建" class="header-anchor">#</a> 创建</h2> <p>map有3钟初始化方式，一般通过make方式创建</p> <div class="language- extra-class"><pre class="language-text"><code>func TestMapInit(t *testing.T) {
+	// 初始化方式1：直接声明
+	// var m1 map[string]int
+	// m1[&quot;a&quot;] = 1
+	// t.Log(m1, unsafe.Sizeof(m1))
+	// panic: assignment to entry in nil map
+	// 向 map 写入要非常小心，因为向未初始化的 map（值为 nil）写入会引发 panic，所以向 map 写入时需先进行判空操作
+
+	// 初始化方式2：使用字面量
+	m2 := map[string]int{}
+	m2[&quot;a&quot;] = 2
+	t.Log(m2, unsafe.Sizeof(m2))
+	// map[a:2] 8
+
+	// 初始化方式3：使用make创建
+	m3 := make(map[string]int)
+	m3[&quot;a&quot;] = 3
+	t.Log(m3, unsafe.Sizeof(m3))
+	// map[a:3] 8
+}
+</code></pre></div><p>map的创建通过生成汇编码可以知道，make创建map时调用的底层函数是<code>runtime.makemap</code>。如果你的map初始容量小于等于8会发现走的是<code>runtime.fastrand</code>是因为容量小于8时不需要生成多个桶，一个桶的容量就可以满足</p> <h4 id="创建流程"><a href="#创建流程" class="header-anchor">#</a> 创建流程</h4> <p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/image-20220117192217943.png" alt=""></p> <p>makemap函数会通过 <code>fastrand</code> 创建一个随机的哈希种子，然后根据传入的 <code>hint</code> 计算出需要的最小需要的桶的数量，最后再使用 <code>makeBucketArray</code>创建用于保存桶的数组，这个方法其实就是根据传入的 <code>B</code> 计算出的需要创建的桶数量在内存中分配一片连续的空间用于存储数据，在创建桶的过程中还会额外创建一些用于保存溢出数据的桶，数量是 <code>2^(B-4)</code> 个。初始化完成返回hmap指针。</p> <h4 id="计算b的初始值"><a href="#计算b的初始值" class="header-anchor">#</a> 计算B的初始值</h4> <p>找到一个 B，使得 map 的装载因子在正常范围内</p> <div class="language- extra-class"><pre class="language-text"><code>B := uint8(0)
+for overLoadFactor(hint, B) {
+	B++
+}
+h.B = B
+
+// overLoadFactor reports whether count items placed in 1&lt;&lt;B buckets is over loadFactor.
+func overLoadFactor(count int, B uint8) bool {
+	return count &gt; bucketCnt &amp;&amp; uintptr(count) &gt; loadFactorNum*(bucketShift(B)/loadFactorDen)
+}
+</code></pre></div><h2 id="查找"><a href="#查找" class="header-anchor">#</a> 查找</h2> <p>Go 语言中读取 map 有两种语法：带 comma 和 不带 comma。当要查询的 key 不在 map 里，带 comma 的用法会返回一个 bool 型变量提示 key 是否在 map 中；而不带 comma 的语句则会返回一个 value 类型的零值。如果 value 是 int 型就会返回 0，如果 value 是 string 类型，就会返回空字符串。</p> <div class="language-stylus extra-class"><pre class="language-stylus"><code><span class="token comment">// 不带 comma 用法</span>
+<span class="token variable-declaration"><span class="token variable">value</span> <span class="token operator">:=</span> m<span class="token punctuation">[</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">]</span></span>
+fmt<span class="token punctuation">.</span><span class="token func"><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;value:%s&quot;</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span></span>
+
+<span class="token comment">// 带 comma 用法</span>
+value, ok <span class="token punctuation">:</span>= m<span class="token punctuation">[</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">]</span>
+<span class="token statement"><span class="token keyword">if</span> ok <span class="token punctuation">{</span></span>
+    fmt<span class="token punctuation">.</span><span class="token func"><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;value:%s&quot;</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span></span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>map的查找通过生成汇编码可以知道，根据 key 的不同类型，编译器会将查找函数用更具体的函数替换，以优化效率：</p> <table><thead><tr><th style="text-align:left;">key 类型</th> <th style="text-align:left;">查找</th></tr></thead> <tbody><tr><td style="text-align:left;">uint32</td> <td style="text-align:left;">mapaccess1_fast32(t <em>maptype, h</em> hmap, key uint32) unsafe.Pointer</td></tr> <tr><td style="text-align:left;">uint32</td> <td style="text-align:left;">mapaccess2_fast32(t <em>maptype, h</em> hmap, key uint32) (unsafe.Pointer, bool)</td></tr> <tr><td style="text-align:left;">uint64</td> <td style="text-align:left;">mapaccess1_fast64(t <em>maptype, h</em> hmap, key uint64) unsafe.Pointer</td></tr> <tr><td style="text-align:left;">uint64</td> <td style="text-align:left;">mapaccess2_fast64(t <em>maptype, h</em> hmap, key uint64) (unsafe.Pointer, bool)</td></tr> <tr><td style="text-align:left;">string</td> <td style="text-align:left;">mapaccess1_faststr(t <em>maptype, h</em> hmap, ky string) unsafe.Pointer</td></tr> <tr><td style="text-align:left;">string</td> <td style="text-align:left;">mapaccess2_faststr(t <em>maptype, h</em> hmap, ky string) (unsafe.Pointer, bool)</td></tr></tbody></table> <h4 id="查找流程"><a href="#查找流程" class="header-anchor">#</a> 查找流程</h4> <p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/image-20220117201006909.png" alt=""></p> <h4 id="写保护监测"><a href="#写保护监测" class="header-anchor">#</a> 写保护监测</h4> <p>函数首先会检查 map 的标志位 flags。如果 flags 的写标志位此时被置 1 了，说明有其他协程在执行“写”操作，进而导致程序 panic。这也说明了 map 对协程是不安全的。</p> <div class="language- extra-class"><pre class="language-text"><code>if h.flags&amp;hashWriting != 0 {
+	throw(&quot;concurrent map read and map write&quot;)
+}
+</code></pre></div><h4 id="计算hash值"><a href="#计算hash值" class="header-anchor">#</a> 计算hash值</h4> <div class="language- extra-class"><pre class="language-text"><code>hash := t.hasher(noescape(unsafe.Pointer(&amp;ky)), uintptr(h.hash0))
+</code></pre></div><p>key经过哈希函数计算后，得到的哈希值如下（主流64位机下共 64 个 bit 位）：</p> <div class="language- extra-class"><pre class="language-text"><code> 10010111 | 000011110110110010001111001010100010010110010101010 │ 01010
+</code></pre></div><h4 id="找到hash对应的bucket"><a href="#找到hash对应的bucket" class="header-anchor">#</a> 找到hash对应的bucket</h4> <p>m: 桶的个数</p> <p>从buckets 通过 hash &amp; m 得到对应的bucket，如果bucket正在扩容，并且没有扩容完成，则从oldbuckets得到对应的bucket</p> <div class="language- extra-class"><pre class="language-text"><code>m := bucketMask(h.B)
+b := (*bmap)(add(h.buckets, (hash&amp;m)*uintptr(t.bucketsize)))
+// m个桶对应B个位
+if c := h.oldbuckets; c != nil {
+  if !h.sameSizeGrow() {
+  	// 扩容前m是之前的一半
+  	m &gt;&gt;= 1
+  }
+  oldb := (*bmap)(add(c, (hash&amp;m)*uintptr(t.bucketsize)))
+  if !evacuated(oldb) {
+	  b = oldb
+	}
+}
+</code></pre></div><p>计算hash所在桶编号：</p> <p>用上一步哈希值最后的 5 个 bit 位，也就是 <code>01010</code>，值为 10，也就是 10 号桶（范围是0~31号桶）</p> <h4 id="遍历bucket"><a href="#遍历bucket" class="header-anchor">#</a> 遍历bucket</h4> <p>计算hash所在的槽位:</p> <div class="language- extra-class"><pre class="language-text"><code>top := tophash(hash)
+func tophash(hash uintptr) uint8 {
+	top := uint8(hash &gt;&gt; (goarch.PtrSize*8 - 8))
+	if top &lt; minTopHash {
+		top += minTopHash
+	}
+	return top
+}
+</code></pre></div><p>用上一步哈希值哈希值的高8个bit 位，也就是<code>10010111</code>，转化为十进制，也就是151，在 10 号 bucket 中寻找** tophash 值（HOB hash）为 151* 的 槽位**，即为key所在位置，找到了 2 号槽位，这样整个查找过程就结束了。</p> <p><img src="https://static.sitestack.cn/projects/qcrao-Go-Questions/f39e10e1474fda593cbca86eb0c517e2.png" alt="img"></p> <p>如果在 bucket 中没找到，并且 overflow 不为空，还要继续去 overflow bucket 中寻找，直到找到或是所有的 key 槽位都找遍了，包括所有的 overflow bucket。</p> <h4 id="返回key对应的指针"><a href="#返回key对应的指针" class="header-anchor">#</a> 返回key对应的指针</h4> <p>通过上面找到了对应的槽位，这里我们再详细分析下key/value值是如何获取的：</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token comment">// key 定位公式</span>
+k <span class="token operator">:=</span><span class="token function">add</span><span class="token punctuation">(</span>unsafe<span class="token punctuation">.</span><span class="token function">Pointer</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>dataOffset<span class="token operator">+</span>i<span class="token operator">*</span><span class="token function">uintptr</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>keysize<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">// value 定位公式</span>
+v<span class="token operator">:=</span> <span class="token function">add</span><span class="token punctuation">(</span>unsafe<span class="token punctuation">.</span><span class="token function">Pointer</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>dataOffset<span class="token operator">+</span>bucketCnt<span class="token operator">*</span><span class="token function">uintptr</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>keysize<span class="token punctuation">)</span><span class="token operator">+</span>i<span class="token operator">*</span><span class="token function">uintptr</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>valuesize<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">//对于 bmap 起始地址的偏移：</span>
+dataOffset <span class="token operator">=</span> unsafe<span class="token punctuation">.</span><span class="token function">Offsetof</span><span class="token punctuation">(</span><span class="token keyword">struct</span><span class="token punctuation">{</span>
+  b bmap
+  v <span class="token builtin">int64</span>
+<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">.</span>v<span class="token punctuation">)</span>
+</code></pre></div><p>bucket 里 key 的起始地址就是 unsafe.Pointer(b)+dataOffset。第 i 个 key 的地址就要在此基础上跨过 i 个 key 的大小；而我们又知道，value 的地址是在所有 key 之后，因此第 i 个 value 的地址还需要加上所有 key 的偏移。</p> <h2 id="赋值"><a href="#赋值" class="header-anchor">#</a> 赋值</h2> <p>通过汇编语言可以看到，向 map 中插入或者修改 key，最终调用的是 <code>mapassign</code> 函数。</p> <p>实际上插入或修改 key 的语法是一样的，只不过前者操作的 key 在 map 中不存在，而后者操作的 key 存在 map 中。</p> <p>mapassign 有一个系列的函数，根据 key 类型的不同，编译器会将其优化为相应的“快速函数”。</p> <table><thead><tr><th style="text-align:left;">key 类型</th> <th style="text-align:left;">插入</th></tr></thead> <tbody><tr><td style="text-align:left;">uint32</td> <td style="text-align:left;">mapassign_fast32(t <em>maptype, h</em> hmap, key uint32) unsafe.Pointer</td></tr> <tr><td style="text-align:left;">uint64</td> <td style="text-align:left;">mapassign_fast64(t <em>maptype, h</em> hmap, key uint64) unsafe.Pointer</td></tr> <tr><td style="text-align:left;">string</td> <td style="text-align:left;">mapassign_faststr(t <em>maptype, h</em> hmap, ky string) unsafe.Pointer</td></tr></tbody></table> <p>我们只用研究最一般的赋值函数 <code>mapassign</code>。</p> <h4 id="赋值流程"><a href="#赋值流程" class="header-anchor">#</a> 赋值流程</h4> <p><img src="https://cdn.jsdelivr.net/gh/caijinlin/imgcdn/image-20220122215940713.png" alt=""></p> <p>map的赋值会附带着map的扩容和迁移，map的扩容只是将底层数组扩大了一倍，并没有进行数据的转移，数据的转移是在扩容后逐步进行的，在迁移的过程中每进行一次赋值（access或者delete）会至少做一次迁移工作。</p> <h4 id="校验和初始化"><a href="#校验和初始化" class="header-anchor">#</a> 校验和初始化</h4> <p>1.判断map是否为nil</p> <ol start="2"><li>判断是否并发读写 map，若是则抛出异常</li> <li>判断 buckets 是否为 nil，若是则调用 newobject 根据当前 bucket 大小进行分配</li></ol> <h4 id="迁移"><a href="#迁移" class="header-anchor">#</a> 迁移</h4> <p>每一次进行赋值/删除操作时，只要oldbuckets != nil 则认为正在扩容，会做一次迁移工作，下面会详细说下迁移过程</p> <h4 id="查找-更新"><a href="#查找-更新" class="header-anchor">#</a> 查找&amp;更新</h4> <p>根据上面查找过程，查找key所在位置，如果找到则更新，没找到则找空位插入即可</p> <h4 id="扩容"><a href="#扩容" class="header-anchor">#</a> 扩容</h4> <p>经过前面迭代寻找动作，若没有找到可插入的位置，意味着需要扩容进行插入，下面会详细说下扩容过程</p> <h2 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h2> <p>通过汇编语言可以看到，向 map 中删除 key，最终调用的是 <code>mapdelete</code> 函数</p> <div class="language- extra-class"><pre class="language-text"><code>func mapdelete(t \*maptype, h _hmap, key unsafe.Pointer)
+</code></pre></div><p>删除的逻辑相对比较简单，大多函数在赋值操作中已经用到过，核心还是找到 key 的具体位置。寻找过程都是类似的，在 bucket 中挨个 cell 寻找。找到对应位置后，对 key 或者 value 进行“清零”操作，将 count 值减 1，将对应位置的 tophash 值置成 <code>Empty</code></p> <div class="language- extra-class"><pre class="language-text"><code>e := add(unsafe.Pointer(b), dataOffset+bucketCnt*2*goarch.PtrSize+i*uintptr(t.elemsize))
+if t.elem.ptrdata != 0 {
+	memclrHasPointers(e, t.elem.size)
+} else {
+	memclrNoHeapPointers(e, t.elem.size)
+}
+b.tophash[i] = emptyOne
+</code></pre></div><h2 id="扩容-2"><a href="#扩容-2" class="header-anchor">#</a> 扩容</h2> <h4 id="扩容时机"><a href="#扩容时机" class="header-anchor">#</a> 扩容时机</h4> <p>再来说触发 map 扩容的时机：在向 map 插入新 key 的时候，会进行条件检测，符合下面这 2 个条件，就会触发扩容：</p> <div class="language- extra-class"><pre class="language-text"><code>if !h.growing() &amp;&amp; (overLoadFactor(h.count+1, h.B) || tooManyOverflowBuckets(h.noverflow, h.B)) {
+		hashGrow(t, h)
+		goto again // Growing the table invalidates everything, so try again
+	}
+
+</code></pre></div><p>1、装载因子超过阈值</p> <p>源码里定义的阈值是 6.5 (loadFactorNum/loadFactorDen)，是经过测试后取出的一个比较合理的因子</p> <p>我们知道，每个 bucket 有 8 个空位，在没有溢出，且所有的桶都装满了的情况下，装载因子算出来的结果是 8。因此当装载因子超过 6.5 时，表明很多 bucket 都快要装满了，查找效率和插入效率都变低了。在这个时候进行扩容是有必要的。</p> <p>对于条件 1，元素太多，而 bucket 数量太少，很简单：将 B 加 1，bucket 最大数量(<code>2^B</code>)直接变成原来 bucket 数量的 2 倍。于是，就有新老 bucket 了。注意，这时候元素都在老 bucket 里，还没迁移到新的 bucket 来。新 bucket 只是最大数量变为原来最大数量的 2 倍(<code>2^B * 2</code>) 。</p> <p>2、overflow 的 bucket 数量过多</p> <p>在装载因子比较小的情况下，这时候 map 的查找和插入效率也很低，而第 1 点识别不出来这种情况。表面现象就是计算装载因子的分子比较小，即 map 里元素总数少，但是 bucket 数量多（真实分配的 bucket 数量多，包括大量的 overflow bucket）</p> <p>不难想像造成这种情况的原因：不停地插入、删除元素。先插入很多元素，导致创建了很多 bucket，但是装载因子达不到第 1 点的临界值，未触发扩容来缓解这种情况。之后，删除元素降低元素总数量，再插入很多元素，导致创建很多的 overflow bucket，但就是不会触发第 1 点的规定，你能拿我怎么办？overflow bucket 数量太多，导致 key 会很分散，查找插入效率低得吓人，因此出台第 2 点规定。这就像是一座空城，房子很多，但是住户很少，都分散了，找起人来很困难</p> <p>对于条件 2，其实元素没那么多，但是 overflow bucket 数特别多，说明很多 bucket 都没装满。解决办法就是开辟一个新 bucket 空间，将老 bucket 中的元素移动到新 bucket，使得同一个 bucket 中的 key 排列地更紧密。这样，原来，在 overflow bucket 中的 key 可以移动到 bucket 中来。结果是节省空间，提高 bucket 利用率，map 的查找和插入效率自然就会提升。</p> <h4 id="扩容函数"><a href="#扩容函数" class="header-anchor">#</a> 扩容函数</h4> <div class="language- extra-class"><pre class="language-text"><code>func hashGrow(t *maptype, h *hmap) {
+	bigger := uint8(1)
+	if !overLoadFactor(h.count+1, h.B) {
+		bigger = 0
+		h.flags |= sameSizeGrow
+	}
+	oldbuckets := h.buckets
+	newbuckets, nextOverflow := makeBucketArray(t, h.B+bigger, nil)
+
+	flags := h.flags &amp;^ (iterator | oldIterator)
+	if h.flags&amp;iterator != 0 {
+		flags |= oldIterator
+	}
+	// commit the grow (atomic wrt gc)
+	h.B += bigger
+	h.flags = flags
+	h.oldbuckets = oldbuckets
+	h.buckets = newbuckets
+	h.nevacuate = 0
+	h.noverflow = 0
+
+	if h.extra != nil &amp;&amp; h.extra.overflow != nil {
+		// Promote current overflow buckets to the old generation.
+		if h.extra.oldoverflow != nil {
+			throw(&quot;oldoverflow is not nil&quot;)
+		}
+		h.extra.oldoverflow = h.extra.overflow
+		h.extra.overflow = nil
+	}
+	if nextOverflow != nil {
+		if h.extra == nil {
+			h.extra = new(mapextra)
+		}
+		h.extra.nextOverflow = nextOverflow
+	}
+
+	// the actual copying of the hash table data is done incrementally
+	// by growWork() and evacuate().
+}
+</code></pre></div><p>由于 map 扩容需要将原有的 key/value 重新搬迁到新的内存地址，如果有大量的 key/value 需要搬迁，会非常影响性能。因此 Go map 的扩容采取了一种称为“渐进式”的方式，原有的 key 并不会一次性搬迁完毕，每次最多只会搬迁 2 个 bucket。</p> <p>上面说的 <code>hashGrow()</code> 函数实际上并没有真正地“搬迁”，它只是分配好了新的 buckets，并将老的 buckets 挂到了 oldbuckets 字段上。真正搬迁 buckets 的动作在 <code>growWork()</code> 函数中，而调用 <code>growWork()</code> 函数的动作是在 mapassign 和 mapdelete 函数中。也就是插入或修改、删除 key 的时候，都会尝试进行搬迁 buckets 的工作。先检查 oldbuckets 是否搬迁完毕，具体来说就是检查 oldbuckets 是否为 nil。</p> <h2 id="迁移-2"><a href="#迁移-2" class="header-anchor">#</a> 迁移</h2> <h4 id="迁移时机"><a href="#迁移时机" class="header-anchor">#</a> 迁移时机</h4> <p>如果未迁移完毕，赋值/删除的时候，扩容完毕后（预分配内存），不会马上就进行迁移。而是采取<strong>增量扩容</strong>的方式，当有访问到具体 bukcet 时，才会逐渐的进行迁移（将 oldbucket 迁移到 bucket）</p> <div class="language- extra-class"><pre class="language-text"><code>if h.growing() {
+		growWork(t, h, bucket)
+}
+</code></pre></div><h4 id="迁移函数"><a href="#迁移函数" class="header-anchor">#</a> 迁移函数</h4> <div class="language- extra-class"><pre class="language-text"><code>func growWork(t *maptype, h *hmap, bucket uintptr) {
+	// 首先把需要操作的bucket 搬迁
+	evacuate(t, h, bucket&amp;h.oldbucketmask())
+
+	 // 再顺带搬迁一个bucket
+	if h.growing() {
+		evacuate(t, h, h.nevacuate)
+	}
+}
+</code></pre></div><p>nevacuate 标识的是当前的进度，如果都搬迁完，应该和2^B的长度是一样的</p> <p>在evacuate 方法实现是把这个位置对应的bucket，以及其冲突链上的数据都转移到新的buckets上。</p> <ol><li>先要判断当前bucket是不是已经转移。 (oldbucket 标识需要搬迁的bucket 对应的位置)</li></ol> <div class="language-golang extra-class"><pre class="language-text"><code>b := (*bmap)(add(h.oldbuckets, oldbucket*uintptr(t.bucketsize)))
+// 判断
+if !evacuated(b) {
+  // 做转移操作
+}
+</code></pre></div><p>转移的判断直接通过tophash 就可以，判断tophash中第一个hash值即可</p> <div class="language-golang extra-class"><pre class="language-text"><code>func evacuated(b *bmap) bool {
+  h := b.tophash[0]
+  // 这个区间的flag 均是已被转移
+  return h &gt; emptyOne &amp;&amp; h &lt; minTopHash // 1 ~ 5
+}
+</code></pre></div><ol start="2"><li>如果没有被转移，那就要迁移数据了。数据迁移时，可能是迁移到大小相同的buckets上，也可能迁移到2倍大的buckets上。这里xy 都是标记目标迁移位置的标记：x 标识的是迁移到相同的位置，y 标识的是迁移到2倍大的位置上。我们先看下目标位置的确定：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var xy [2]evacDst
+x := &amp;xy[0]
+x.b = (*bmap)(add(h.buckets, oldbucket*uintptr(t.bucketsize)))
+x.k = add(unsafe.Pointer(x.b), dataOffset)
+x.v = add(x.k, bucketCnt*uintptr(t.keysize))
+if !h.sameSizeGrow() {
+  // 如果是2倍的大小，就得算一次 y 的值
+  y := &amp;xy[1]
+  y.b = (*bmap)(add(h.buckets, (oldbucket+newbit)*uintptr(t.bucketsize)))
+  y.k = add(unsafe.Pointer(y.b), dataOffset)
+  y.v = add(y.k, bucketCnt*uintptr(t.keysize))
+}
+</code></pre></div><ol start="3"><li><p>确定bucket位置后，需要按照kv 一条一条做迁移。</p></li> <li><p>如果当前搬迁的bucket 和 总体搬迁的bucket的位置是一样的，我们需要更新总体进度的标记 nevacuate</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>// newbit 是oldbuckets 的长度，也是nevacuate 的重点
+func advanceEvacuationMark(h *hmap, t *maptype, newbit uintptr) {
+  // 首先更新标记
+  h.nevacuate++
+
+  // 最多查看2^10 个bucket
+  stop := h.nevacuate + 1024
+  if stop &gt; newbit {
+    stop = newbit
+  }
+
+  // 如果没有搬迁就停止了，等下次搬迁
+  for h.nevacuate != stop &amp;&amp; bucketEvacuated(t, h, h.nevacuate) {
+    h.nevacuate++
+  }
+
+  // 如果都已经搬迁完了，oldbukets 完全搬迁成功，清空oldbuckets
+  if h.nevacuate == newbit {
+    h.oldbuckets = nil
+    if h.extra != nil {
+      h.extra.oldoverflow = nil
+    }
+    h.flags &amp;^= sameSizeGrow
+  }
+</code></pre></div><h2 id="遍历"><a href="#遍历" class="header-anchor">#</a> 遍历</h2> <p>遍历的过程，就是按顺序遍历 bucket，同时按顺序遍历 bucket 中的 key。</p> <p>map遍历是无序的，如果想实现有序遍历，可以先对key进行排序</p> <p>为什么遍历 map 是无序的？</p> <p>如果发生过迁移，key 的位置发生了重大的变化，有些 key 飞上高枝，有些 key 则原地不动。这样，遍历 map 的结果就不可能按原来的顺序了。</p> <p>如果就一个写死的 map，不会向 map 进行插入删除的操作，按理说每次遍历这样的 map 都会返回一个固定顺序的 key/value 序列吧。但是 Go 杜绝了这种做法，因为这样会给新手程序员带来误解，以为这是一定会发生的事情，在某些情况下，可能会酿成大错。</p> <p>Go 做得更绝，当我们在遍历 map 时，并不是固定地从 0 号 bucket 开始遍历，每次都是从一个**随机值序号的 bucket <strong>开始遍历，并且是从这个 bucket 的一个</strong>随机序号的 cell **开始遍历。这样，即使你是一个写死的 map，仅仅只是遍历它，也不太可能会返回一个固定序列的 key/value 对了。</p> <div class="language- extra-class"><pre class="language-text"><code>//runtime.mapiterinit 遍历时选用初始桶的函数
+func mapiterinit(t *maptype, h *hmap, it *hiter) {
+  ...
+  it.t = t
+  it.h = h
+  it.B = h.B
+  it.buckets = h.buckets
+  if t.bucket.kind&amp;kindNoPointers != 0 {
+    h.createOverflow()
+    it.overflow = h.extra.overflow
+    it.oldoverflow = h.extra.oldoverflow
+  }
+
+  r := uintptr(fastrand())
+  if h.B &gt; 31-bucketCntBits {
+    r += uintptr(fastrand()) &lt;&lt; 31
+  }
+  it.startBucket = r &amp; bucketMask(h.B)
+  it.offset = uint8(r &gt;&gt; h.B &amp; (bucketCnt - 1))
+  it.bucket = it.startBucket
+    ...
+
+  mapiternext(it)
+}
+</code></pre></div><h1 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h1> <ol><li>map是引用类型</li> <li>map遍历是无序的</li> <li>map是非线程安全的</li> <li>map的哈希冲突解决方式是链表法</li> <li>map的扩容不是一定会新增空间，也有可能是只是做了内存整理</li> <li>map的迁移是逐步进行的，在每次赋值时，会做至少一次迁移工作</li> <li>map中删除key，有可能导致出现很多空的kv，这会导致迁移操作，如果可以避免，尽量避免</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/50.ccb47428.js" defer></script>
+  </body>
+</html>

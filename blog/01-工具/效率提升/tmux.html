@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>tmux | Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/16.88b2bba9.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/20.1a2d20ad.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/23.cecba155.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/35.7f7e9e68.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/39.2232fa48.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.ccb47428.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/68.558e1980.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/75.a770d2f2.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/82.5b4da558.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>tmux</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#介绍" class="sidebar-link">介绍</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#安装" class="sidebar-link">安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#配置" class="sidebar-link">配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#字体图标" class="sidebar-link">字体图标</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#插件" class="sidebar-link">插件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#安装插件管理器" class="sidebar-link">安装插件管理器</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#安装插件" class="sidebar-link">安装插件</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#帮助" class="sidebar-link">帮助</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#会话管理-session" class="sidebar-link">会话管理 (session)</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#窗口管理-window" class="sidebar-link">窗口管理 (window)</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#窗格管理-pane" class="sidebar-link">窗格管理 (pane)</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#效果" class="sidebar-link">效果</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/tmux.html#我的配置" class="sidebar-link">我的配置</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="tmux"><a href="#tmux" class="header-anchor">#</a> tmux</h1> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>tmux（终端复用器）是一个在终端窗口中创建和管理多个会话的工具。它允许用户在一个终端窗口中同时运行多个终端会话，并在这些会话之间自由切换，实现终端复用和多任务管理的功能</p> <p>tmux 包括会话、窗口、面板三个角色，以下是 tmux 的一些特点和用法：</p> <p>会话管理：tmux 允许创建和管理多个会话，每个会话可以包含一个或多个窗口，窗口又可以分割为多个面板。这样可以在一个终端窗口中同时运行多个终端会话，便于在不同任务之间切换和管理。</p> <p>窗口和面板：tmux 中的窗口类似于标签页，每个窗口可以包含一个或多个面板，面板则是终端窗口的分割区域。通过创建窗口和调整面板布局，可以在一个终端窗口中同时查看和操作多个终端会话。</p> <p>快捷键操作：tmux 使用快捷键来执行各种操作，如创建会话、切换窗口、调整面板大小等。这些快捷键操作可以大大提高终端操作的效率和速度。</p> <p>会话的持久化：tmux 允许用户在会话之间断开连接，并在重新连接后恢复之前的会话状态。这意味着你可以断开 SSH 连接或关闭终端窗口，然后在需要时重新连接并恢复之前的会话，无需重新打开和配置。</p> <p>远程协作：tmux 支持多用户同时协作编辑同一个终端会话。多个用户可以同时连接到同一个 tmux 会话，并实时查看和编辑会话内容，方便团队协作和共享。</p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language- extra-class"><pre class="language-text"><code>brew install tmux
+</code></pre></div><h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <h3 id="字体图标"><a href="#字体图标" class="header-anchor">#</a> 字体图标</h3> <p>安装字体，有些风格的主题显示图标时就可以正常显示了</p> <div class="language- extra-class"><pre class="language-text"><code>cd
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+</code></pre></div><p>安装完字体，在item2终端进行设置</p> <p><img src="https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/tmux_setting.png" alt=""></p> <h2 id="插件"><a href="#插件" class="header-anchor">#</a> 插件</h2> <h3 id="安装插件管理器"><a href="#安装插件管理器" class="header-anchor">#</a> 安装插件管理器</h3> <div class="language- extra-class"><pre class="language-text"><code>git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+</code></pre></div><h3 id="安装插件"><a href="#安装插件" class="header-anchor">#</a> 安装插件</h3> <p>修改配置文件 ~/.tmux.conf添加以下内容，然后在<strong>tmux</strong>中执行命令<code>prefix + i</code>安装插件，prefix指前缀键（默认ctrl + b, tmux所有快捷键都要通过前缀键唤起)</p> <div class="language- extra-class"><pre class="language-text"><code># theme主题
+set -g @plugin 'odedlaz/tmux-onedark-theme'
+
+set -g @onedark_widgets &quot;Go程序员&quot;
+set -g @onedark_time_format &quot;%I:%M&quot;
+set -g @onedark_date_format &quot;%m.%d&quot;
+#set -g @onedark_date_format &quot;%m:%d&quot;
+
+# 解决neovim中esc响应慢
+set -s escape-time 0
+set-option -g status-position bottom
+
+# 自动保存会话
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-save-interval '15'
+set -g @continuum-restore 'on'
+set -g @resurrect-capture-pane-contents 'on'
+run '~/.tmux/plugins/tpm/tpm'
+
+# 设置自定义前缀
+set -g prefix C-b
+# 采用vim的操作方式
+setw -g mode-keys vi
+# 窗口序号从1开始计数
+set -g base-index 1
+# 开启鼠标模式
+set-option -g mouse on
+
+# 通过前缀+KJHL快速切换pane
+#up
+bind-key k select-pane -U
+#down
+bind-key j select-pane -D
+#left
+bind-key h select-pane -L
+#right
+bind-key l select-pane -R
+</code></pre></div><p>重新加载配置项</p> <div class="language- extra-class"><pre class="language-text"><code>tmux source ~/.tmux.conf
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <p>Tmux 的最简操作流程:</p> <p>通过<code>tmux new -s my_session</code>新建会话，在 Tmux 窗口运行所需的程序，按下快捷键<code>ctrl+b d</code>将会话分离
+下次使用时，通过<code>tmux attach -t my_session</code>重新连接到会话</p> <p>会话（session）、窗口（window）和窗格（pane）是层次结构关系的组成部分，用于管理和组织终端会话。</p> <ul><li><p>会话（session）：是 tmux 的最顶层概念，表示一个完整的终端会话。一个会话可以包含多个窗口，并且可以在后台运行，即使你关闭了终端窗口也不会中断。会话提供了一个持久的运行环境，可以在其中创建、切换和管理窗口。</p></li> <li><p>窗口（window）：是会话中的一个独立工作区域，可以看作是一个可见的终端屏幕。每个窗口都有自己的编号和标签，并可以在会话中进行切换。你可以在一个窗口中运行一个应用程序或进程，并在不同窗口之间切换来进行不同的任务。</p></li> <li><p>窗格（pane）：是窗口中的分割区域，可以将一个窗口划分为多个垂直或水平的窗格。每个窗格可以运行不同的命令或程序，并在同一个窗口内同时显示多个终端界面。通过窗格，你可以同时查看和操作多个终端会话。</p></li></ul> <p>总结关系：</p> <ul><li>一个会话（session）可以包含多个窗口（window）。</li> <li>一个窗口可以被划分为多个窗格（pane）。</li> <li>在一个会话中，可以通过切换窗口来在不同窗口之间进行切换。</li> <li>在一个窗口中，可以通过切分窗格来创建多个并行运行的终端界面。</li></ul> <p>通过这种层次结构关系，tmux 提供了灵活的终端管理功能，使你能够高效地组织和控制多个终端会话和任务。</p> <h3 id="帮助"><a href="#帮助" class="header-anchor">#</a> 帮助</h3> <ul><li><code>tmux list-commands</code> 所有命令</li> <li><code>tmux list-keys</code> 所有快捷键</li> <li><code>tmux list-sessions</code> 所有会话</li> <li><code>tmux list-windows</code> 所有窗口</li> <li><code>tmux list-panes</code> 所有窗格</li></ul> <h3 id="会话管理-session"><a href="#会话管理-session" class="header-anchor">#</a> 会话管理 (session)</h3> <table><thead><tr><th>shell命令</th> <th>说明</th> <th>快捷键</th></tr></thead> <tbody><tr><td>tmux ls</td> <td>查看所有会话</td> <td></td></tr> <tr><td>tmux new -s session_name</td> <td>新建会话</td> <td></td></tr> <tr><td>tmux -CC</td> <td>新建会话（基于item2操作）</td> <td></td></tr> <tr><td>tmux attach -t session_name</td> <td>进入会话</td> <td></td></tr> <tr><td>tmux rename-session session_name</td> <td>重命名当前会话</td> <td>ctrl+b $</td></tr> <tr><td>tmux switch -t session_name</td> <td>切换会话</td> <td>ctrl+b s</td></tr> <tr><td>tmux detach</td> <td>分离当前会话</td> <td>ctrl+b d</td></tr> <tr><td>tmux kill-session</td> <td>杀死当前会话</td> <td></td></tr> <tr><td>tmux kill-session -t session_name</td> <td>杀死指定会话</td> <td></td></tr></tbody></table> <h3 id="窗口管理-window"><a href="#窗口管理-window" class="header-anchor">#</a> 窗口管理 (window)</h3> <table><thead><tr><th>shell命令</th> <th>说明</th> <th>快捷键</th></tr></thead> <tbody><tr><td>tmux new-window -n window_name</td> <td>新建窗口</td> <td>ctrl+b c</td></tr> <tr><td>tmux list-windows</td> <td>所有窗口</td> <td></td></tr> <tr><td>tmux select-window -t window_name</td> <td>切换窗口</td> <td></td></tr> <tr><td></td> <td>切换到上一个窗口</td> <td>ctrl+b p</td></tr> <tr><td></td> <td>切换到下一个窗口</td> <td>ctrl+b n</td></tr> <tr><td></td> <td>切换到指定编号的窗口</td> <td>ctrl+b number</td></tr> <tr><td></td> <td>切换</td> <td>ctrl+b w</td></tr> <tr><td>tmux rename-window window_name</td> <td>重命名当前窗口</td> <td>ctrl+b ,</td></tr> <tr><td>tmux kill-window -t window_name</td> <td>关闭窗口</td> <td>ctrl+b &amp;</td></tr></tbody></table> <h3 id="窗格管理-pane"><a href="#窗格管理-pane" class="header-anchor">#</a> 窗格管理 (pane)</h3> <table><thead><tr><th>shell命令</th> <th>说明</th> <th>快捷键</th></tr></thead> <tbody><tr><td>tmux list-panes</td> <td>所有窗格</td> <td></td></tr> <tr><td>tmux split-window</td> <td>上下分隔窗口得到2个窗格</td> <td>ctrl+b &quot;</td></tr> <tr><td>tmux split-window -h</td> <td>左右分隔窗口得到2个窗格</td> <td>ctrl+b %</td></tr> <tr><td>tmux kill-pane</td> <td>关闭窗格</td> <td>ctrl+b x</td></tr> <tr><td>tmux select-pane -t 窗格序号</td> <td>切换指定窗格</td> <td></td></tr> <tr><td></td> <td>切换到上一个窗格</td> <td>ctrl+b ;</td></tr> <tr><td></td> <td>切换并与上一个窗格交换</td> <td>ctrl+b o</td></tr> <tr><td>tmux select-pane -U</td> <td>切换到上方窗格</td> <td>ctrl+b 方向键</td></tr> <tr><td>tmux select-pane -D</td> <td>切换到下方窗格</td> <td>ctrl+b 方向键</td></tr> <tr><td>tmux select-pane -L</td> <td>切换到左边窗格</td> <td>ctrl+b 方向键</td></tr> <tr><td>tmux select-pane -R</td> <td>切换到右边窗格</td> <td>ctrl+b 方向键</td></tr> <tr><td>tmux swap-pane -U</td> <td>当前窗格上移</td> <td>ctrl+b {</td></tr> <tr><td>tmux swap-pane -D</td> <td>当前窗格下移</td> <td>ctrl+b }</td></tr> <tr><td>tmux swap-pane -D</td> <td>当前窗格全屏显示，再使用一次会变回原来大小</td> <td>ctrl+b z</td></tr> <tr><td></td> <td>调整窗格大小</td> <td>ctrl+b alt+方向键</td></tr> <tr><td></td> <td>显示窗格编号</td> <td>ctrl+b q</td></tr></tbody></table> <h2 id="效果"><a href="#效果" class="header-anchor">#</a> 效果</h2> <p><img src="https://fastly.jsdelivr.net/gh/caijinlin/imgcdn/tmux.png" alt=""></p> <h2 id="我的配置"><a href="#我的配置" class="header-anchor">#</a> 我的配置</h2> <p><a href="https://github.com/caijinlin/dotfiles/blob/master/tmux/.tmux.conf" target="_blank" rel="noopener noreferrer">tmux.conf<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/16.88b2bba9.js" defer></script>
+  </body>
+</html>

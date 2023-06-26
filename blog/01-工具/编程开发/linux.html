@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux | Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/20.1a2d20ad.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/16.88b2bba9.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/23.cecba155.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/35.7f7e9e68.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/39.2232fa48.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.ccb47428.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/68.558e1980.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/75.a770d2f2.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/82.5b4da558.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#文本处理" class="sidebar-link">文本处理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#awk" class="sidebar-link">awk</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#grep" class="sidebar-link">grep</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#find" class="sidebar-link">find</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#sort" class="sidebar-link">sort</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#sed" class="sidebar-link">sed</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#ls" class="sidebar-link">ls</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#uniq" class="sidebar-link">uniq</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#tr" class="sidebar-link">tr</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#cut" class="sidebar-link">cut</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#wc" class="sidebar-link">wc</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#zip" class="sidebar-link">zip</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#tar" class="sidebar-link">tar</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#rsync" class="sidebar-link">rsync</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#系统状态" class="sidebar-link">系统状态</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#负载" class="sidebar-link">负载</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#cpu" class="sidebar-link">CPU</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#内存" class="sidebar-link">内存</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#网络" class="sidebar-link">网络</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#磁盘" class="sidebar-link">磁盘</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#进程" class="sidebar-link">进程</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#线程" class="sidebar-link">线程</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#系统监控" class="sidebar-link">系统监控</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#进程内存监控" class="sidebar-link">进程内存监控</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#网络带宽监控" class="sidebar-link">网络带宽监控</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#磁盘空间监控" class="sidebar-link">磁盘空间监控</a></li></ul></li><li><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#性能排查" class="sidebar-link">性能排查</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#cpu高" class="sidebar-link">cpu高</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#内存高" class="sidebar-link">内存高</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#网络带宽高" class="sidebar-link">网络带宽高</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#磁盘io高" class="sidebar-link">磁盘IO高</a></li><li class="sidebar-sub-header"><a href="/blog/01-%E5%B7%A5%E5%85%B7/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/linux.html#gc耗时高" class="sidebar-link">GC耗时高</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux"><a href="#linux" class="header-anchor">#</a> Linux</h1> <h2 id="文本处理"><a href="#文本处理" class="header-anchor">#</a> 文本处理</h2> <h3 id="awk"><a href="#awk" class="header-anchor">#</a> awk</h3> <ul><li><code>cat &lt;file&gt; | awk -F ',' 'BEGIN{print &quot;字段1&quot;,&quot;字段2&quot;} { print }'</code> 输出表头</li> <li><code>cat &lt;file&gt; | awk -F ',' '{OFS=&quot;,&quot;; print $2,$1,0}</code> 每一行逗号拼接字符串</li> <li><code>cat &lt;file&gt; | awk 'BEGIN{ORS=&quot;,&quot;}{ print }</code> 逗号连接多行</li> <li><code>cat &lt;file&gt; | awk 'BEGIN{RS=&quot;,&quot;}{ print }</code>  逗号分隔字符串</li> <li><code>cat &lt;file&gt; | awk -F ',' '{ print NR, NF }'</code> 查看行数、列数</li> <li><code>cat &lt;file&gt; | awk -F ',' '{count[$1]++} END {for(k in count) print k,count[k]}'</code> 统计</li> <li><code>cat &lt;file&gt; | awk -F ',' '{ sum += $7; if (min == &quot;&quot;) min = max = $7; if ($7 &gt; max) max = $7; if ($7 &lt; min) min = $7 } END { print max, sum/NR, min }'</code> 计算最大值、最小值、平均值</li></ul> <h3 id="grep"><a href="#grep" class="header-anchor">#</a> grep</h3> <ul><li><code>grep -v &quot;match_pattern&quot; &lt;file&gt;</code> 输出除了什么之外</li> <li><code>grep -c &quot;match_pattern&quot; &lt;file&gt;</code> 输出包含字符行数</li> <li><code>grep &quot;match_pattern&quot; . -r -n</code> 递归搜索文件</li> <li><code>grep -E &quot;pattern1|pattern2&quot; &lt;file&gt;</code> 匹配多个样式</li> <li><code>grep -F -v -f a.file b.file</code> 查询b-a差集</li></ul> <h3 id="find"><a href="#find" class="header-anchor">#</a> find</h3> <ul><li><code>find . -type f -atime -7</code> 最近7天内被访问过的文件</li> <li><code>find . -type f -atime 7</code>  7天前被访问过的文件</li> <li><code>find . -type f -atime +7</code> 超过7天内被访问的文件</li> <li><code>find . -type f -name &quot;*.txt&quot; -delete</code> 删除当前目录*.txt</li> <li><code>find . -name &quot;*.txt&quot; -o -name &quot;*.pdf&quot;</code> 获取多种后缀名文件</li></ul> <h3 id="sort"><a href="#sort" class="header-anchor">#</a> sort</h3> <ul><li><code>cat &lt;file&gt; | sort -t ',' -k 2 -rn</code> 文件逗号分隔，按照第2列纯数字逆序排序输出</li></ul> <h3 id="sed"><a href="#sed" class="header-anchor">#</a> sed</h3> <ul><li><code>sed '/^$/d' &lt;file&gt;</code> 删除空白行</li> <li><code>sed '2d' &lt;file&gt;</code> 删除文件第2行</li> <li><code>sed '2,$d' file</code> 删除文件第2到末尾所有行</li> <li><code>sed '$d' file</code> 删除文件最后一行</li> <li><code>sed 's/book/books/g' &lt;file&gt;</code> 替换文件的所有字符串</li> <li><code>sed 's/book/books/2g' &lt;file&gt;</code> 从第N处匹配开始替换时替换文件的所有字符串</li> <li><code>sed 's/,/\n/g' &lt;file&gt;</code> 替换换行符</li> <li><code>sed -i '1i\&lt;content&gt;' &lt;file&gt;</code> 第1行插入</li> <li><code>sed -i '/^INFO/'d &lt;file&gt;</code> 删除以INFO开头的文件</li></ul> <h3 id="ls"><a href="#ls" class="header-anchor">#</a> ls</h3> <ul><li><code>ls station_[0-9a-z]*_orders.txt</code> 查看文件</li> <li><code>ls -l | grep &quot;^d&quot;</code> 只查看文件夹</li></ul> <h3 id="uniq"><a href="#uniq" class="header-anchor">#</a> uniq</h3> <ul><li><code>cat &lt;file1&gt; &lt;file2&gt; | sort | uniq -u</code> 求文本差集</li> <li><code>sort &lt;file&gt; | uniq -c</code> 计算行重复的次数</li> <li><code>sort &lt;file&gt; | uniq -d</code> 仅显示重复行</li> <li><code>sort &lt;file&gt; | uniq -u</code> 仅显示不重复行</li></ul> <h3 id="tr"><a href="#tr" class="header-anchor">#</a> tr</h3> <ul><li><code>cat &lt;file&gt; | tr a-z A-Z</code> 小写转大写</li> <li><code>cat &lt;file&gt; | tr &quot;,&quot; &quot;\t&quot;</code> 逗号分隔符转tab</li></ul> <h3 id="cut"><a href="#cut" class="header-anchor">#</a> cut</h3> <ul><li><code>echo $PATH | cut -d ':' -f 3,5</code> 提取第3和第5列</li></ul> <h3 id="wc"><a href="#wc" class="header-anchor">#</a> wc</h3> <ul><li><code>wc -l</code> 计算行数</li> <li><code>wc -w</code> 计算单词数</li> <li><code>wc -m</code> 计算字节数</li></ul> <h3 id="zip"><a href="#zip" class="header-anchor">#</a> zip</h3> <ul><li><code>zip -r &lt;file&gt;.zip &lt;file&gt;</code></li> <li><code>unzip &lt;file&gt;.zip</code></li></ul> <h3 id="tar"><a href="#tar" class="header-anchor">#</a> tar</h3> <ul><li><code>tar -czvf file.gz &lt;file&gt;</code> 压缩</li> <li><code>tar --exclude=&lt;dir&gt;/1.txt -czvf file.gz &lt;dir&gt;</code> 排除文件排除1.txt压缩</li> <li><code>tar -tzvf file.gz</code> 列出压缩文件列表</li> <li><code>tar -xzvf file.gz</code> 解压</li></ul> <h3 id="rsync"><a href="#rsync" class="header-anchor">#</a> rsync</h3> <p>需要复制本机ssh公钥到远程机器</p> <div class="language- extra-class"><pre class="language-text"><code>cat ~/.ssh/id_rsa.pub &gt;&gt; authorized_keys
+</code></pre></div><ul><li><code>rsync --bwlimit=10000 -artP &lt;file&gt; -e 'ssh -p &lt;port&gt;' root@&lt;ip&gt;:&lt;target_path&gt;</code> 从本地传输文件到远程机器</li> <li><code>rsync --bwlimit=10000 -artP -e 'ssh -p &lt;port&gt;' root@&lt;ip&gt;:&lt;source_path&gt; ./</code> 从远程机器拉取文件到本地</li></ul> <h2 id="系统状态"><a href="#系统状态" class="header-anchor">#</a> 系统状态</h2> <h3 id="负载"><a href="#负载" class="header-anchor">#</a> 负载</h3> <ul><li><code>top</code></li> <li><code>uptime</code></li></ul> <h3 id="cpu"><a href="#cpu" class="header-anchor">#</a> CPU</h3> <ul><li><code>mpstat -P ALL</code> cpu各核使用率</li></ul> <h3 id="内存"><a href="#内存" class="header-anchor">#</a> 内存</h3> <ul><li><code>vmstat</code></li> <li><code>free</code></li></ul> <h3 id="网络"><a href="#网络" class="header-anchor">#</a> 网络</h3> <ul><li><code>ss</code></li> <li><code>ifstat</code> 网络io统计</li> <li><code>netstat -nat | grep &lt;port&gt;</code> 指定端口的网络连接数</li> <li><code>netstat -nat|awk '{print $6}'|sort|uniq -c|sort -rn</code> 网络连接各状态统计</li></ul> <h3 id="磁盘"><a href="#磁盘" class="header-anchor">#</a> 磁盘</h3> <ul><li><code>iostat</code> 磁盘io统计</li> <li><code>iotop -o</code> 磁盘io占用top</li> <li><code>du -sh ./* | sort -rn | head -n 10</code> 磁盘空间占用top10的文件</li></ul> <h3 id="进程"><a href="#进程" class="header-anchor">#</a> 进程</h3> <ul><li><code>pidstat</code></li> <li><code>ps aux head -1; ps aux | sort -rn -k3 | head -n 10</code> cpu占用top10的进程</li> <li><code>ps aux head -1; ps aux | sort -rn -k4 | head -n 10</code> 内存占用top10的进程</li> <li><code>pidstat -d &lt;时间间隔&gt; -p &lt;进程id&gt;</code> 进程占用磁盘io</li> <li><code>iftop</code></li> <li><code>nethogs</code> 进程带宽</li></ul> <h3 id="线程"><a href="#线程" class="header-anchor">#</a> 线程</h3> <ul><li><code>ps hH p | grep &lt;pid&gt;</code> 查看进程的线程</li></ul> <h2 id="系统监控"><a href="#系统监控" class="header-anchor">#</a> 系统监控</h2> <h3 id="进程内存监控"><a href="#进程内存监控" class="header-anchor">#</a> 进程内存监控</h3> <div class="language- extra-class"><pre class="language-text"><code># !/bin/sh
+# 内存是$4，cpu是$3，$2是进程号，内存&gt;5%
+pids=ps aux | grep &lt;progress&gt; | grep -v grep | awk '{if($4&gt;=5)print $2}' 
+for pid in pids; 
+   do kill -9 $pid echo date +'%F %T' $pid &gt;&gt;/var/log/kill.log 
+done
+</code></pre></div><h3 id="网络带宽监控"><a href="#网络带宽监控" class="header-anchor">#</a> 网络带宽监控</h3> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h3 id="磁盘空间监控"><a href="#磁盘空间监控" class="header-anchor">#</a> 磁盘空间监控</h3> <div class="language- extra-class"><pre class="language-text"><code>#!/bin/sh 
+
+diskinfo=&quot;/tmp/diskinfo.txt&quot;
+for d in `df -P | grep /dev | awk '{print $5}'| sed 's/%//g'`
+do
+    if [ $d -gt 90 ];then
+        df -h&gt;&gt;$diskinfo;
+        #sendmail
+        mutt -s &quot;disk warining!&quot; &quot;1399534656@qq.com&quot; &lt;${diskinfo} -a ${diskinfo}
+        exit 0;
+    fi
+done
+</code></pre></div><h2 id="性能排查"><a href="#性能排查" class="header-anchor">#</a> 性能排查</h2> <p>排查引起系统变慢/网络超时的原因</p> <h3 id="cpu高"><a href="#cpu高" class="header-anchor">#</a> cpu高</h3> <h3 id="内存高"><a href="#内存高" class="header-anchor">#</a> 内存高</h3> <h3 id="网络带宽高"><a href="#网络带宽高" class="header-anchor">#</a> 网络带宽高</h3> <h3 id="磁盘io高"><a href="#磁盘io高" class="header-anchor">#</a> 磁盘IO高</h3> <h3 id="gc耗时高"><a href="#gc耗时高" class="header-anchor">#</a> GC耗时高</h3></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/20.1a2d20ad.js" defer></script>
+  </body>
+</html>

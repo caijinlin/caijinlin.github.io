@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>redis 底层数据结构 | Go程序员</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="在线文档网站">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.1a8e0fbc.css" as="style"><link rel="preload" href="/assets/js/app.df07d0bd.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/75.a770d2f2.js" as="script"><link rel="prefetch" href="/assets/js/10.fd51e39e.js"><link rel="prefetch" href="/assets/js/100.668e1583.js"><link rel="prefetch" href="/assets/js/101.4fbe8556.js"><link rel="prefetch" href="/assets/js/102.0b883ddd.js"><link rel="prefetch" href="/assets/js/103.2e560d16.js"><link rel="prefetch" href="/assets/js/104.57c5c755.js"><link rel="prefetch" href="/assets/js/105.7d8f67c0.js"><link rel="prefetch" href="/assets/js/106.ae37ddb4.js"><link rel="prefetch" href="/assets/js/107.7380cca8.js"><link rel="prefetch" href="/assets/js/108.bcd56d20.js"><link rel="prefetch" href="/assets/js/109.3ffc959d.js"><link rel="prefetch" href="/assets/js/11.8a6f83d0.js"><link rel="prefetch" href="/assets/js/110.c9557f08.js"><link rel="prefetch" href="/assets/js/111.f92ffd61.js"><link rel="prefetch" href="/assets/js/112.885292c3.js"><link rel="prefetch" href="/assets/js/113.e72a28c6.js"><link rel="prefetch" href="/assets/js/114.06d2787d.js"><link rel="prefetch" href="/assets/js/115.510f0836.js"><link rel="prefetch" href="/assets/js/116.60ee1402.js"><link rel="prefetch" href="/assets/js/117.41d44794.js"><link rel="prefetch" href="/assets/js/118.e5c7675b.js"><link rel="prefetch" href="/assets/js/119.01a56395.js"><link rel="prefetch" href="/assets/js/12.eb457ff6.js"><link rel="prefetch" href="/assets/js/120.1a2cc510.js"><link rel="prefetch" href="/assets/js/121.ad1db86d.js"><link rel="prefetch" href="/assets/js/122.c24c8252.js"><link rel="prefetch" href="/assets/js/123.dd63a07b.js"><link rel="prefetch" href="/assets/js/13.92bd6915.js"><link rel="prefetch" href="/assets/js/14.3d33bf90.js"><link rel="prefetch" href="/assets/js/15.f68167d8.js"><link rel="prefetch" href="/assets/js/16.88b2bba9.js"><link rel="prefetch" href="/assets/js/17.e407bcee.js"><link rel="prefetch" href="/assets/js/18.c5f0b697.js"><link rel="prefetch" href="/assets/js/19.7c0baac5.js"><link rel="prefetch" href="/assets/js/20.1a2d20ad.js"><link rel="prefetch" href="/assets/js/21.b11a6191.js"><link rel="prefetch" href="/assets/js/22.161c7a0d.js"><link rel="prefetch" href="/assets/js/23.cecba155.js"><link rel="prefetch" href="/assets/js/24.732bbccb.js"><link rel="prefetch" href="/assets/js/25.0f23e857.js"><link rel="prefetch" href="/assets/js/26.d6ab841f.js"><link rel="prefetch" href="/assets/js/27.f5ac3830.js"><link rel="prefetch" href="/assets/js/28.2e975872.js"><link rel="prefetch" href="/assets/js/29.16b895bf.js"><link rel="prefetch" href="/assets/js/3.e0c49e52.js"><link rel="prefetch" href="/assets/js/30.4faaa16b.js"><link rel="prefetch" href="/assets/js/31.b746cd3c.js"><link rel="prefetch" href="/assets/js/32.94d6a9d5.js"><link rel="prefetch" href="/assets/js/33.def1a2bb.js"><link rel="prefetch" href="/assets/js/34.e5dba5b5.js"><link rel="prefetch" href="/assets/js/35.7f7e9e68.js"><link rel="prefetch" href="/assets/js/36.2e72eda1.js"><link rel="prefetch" href="/assets/js/37.786c00ee.js"><link rel="prefetch" href="/assets/js/38.b1bf81c7.js"><link rel="prefetch" href="/assets/js/39.2232fa48.js"><link rel="prefetch" href="/assets/js/4.da3ef268.js"><link rel="prefetch" href="/assets/js/40.ae1d780d.js"><link rel="prefetch" href="/assets/js/41.9dfa53a2.js"><link rel="prefetch" href="/assets/js/42.efe2b83f.js"><link rel="prefetch" href="/assets/js/43.2a7c6cb5.js"><link rel="prefetch" href="/assets/js/44.9bac664f.js"><link rel="prefetch" href="/assets/js/45.f5b34123.js"><link rel="prefetch" href="/assets/js/46.629733a2.js"><link rel="prefetch" href="/assets/js/47.3d151e32.js"><link rel="prefetch" href="/assets/js/48.4f1d97d0.js"><link rel="prefetch" href="/assets/js/49.3a456c91.js"><link rel="prefetch" href="/assets/js/5.dac787d8.js"><link rel="prefetch" href="/assets/js/50.ccb47428.js"><link rel="prefetch" href="/assets/js/51.f7ba3b74.js"><link rel="prefetch" href="/assets/js/52.d8eb6a91.js"><link rel="prefetch" href="/assets/js/53.05844058.js"><link rel="prefetch" href="/assets/js/54.265b9312.js"><link rel="prefetch" href="/assets/js/55.c39aeaff.js"><link rel="prefetch" href="/assets/js/56.fe03c677.js"><link rel="prefetch" href="/assets/js/57.b65a6d9e.js"><link rel="prefetch" href="/assets/js/58.2ba84914.js"><link rel="prefetch" href="/assets/js/59.26fb2012.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/60.2c92c47c.js"><link rel="prefetch" href="/assets/js/61.f1c659a6.js"><link rel="prefetch" href="/assets/js/62.8e9b8a87.js"><link rel="prefetch" href="/assets/js/63.815ff64c.js"><link rel="prefetch" href="/assets/js/64.e6e2119a.js"><link rel="prefetch" href="/assets/js/65.e9c22257.js"><link rel="prefetch" href="/assets/js/66.07ec5452.js"><link rel="prefetch" href="/assets/js/67.0c12a501.js"><link rel="prefetch" href="/assets/js/68.558e1980.js"><link rel="prefetch" href="/assets/js/69.89572974.js"><link rel="prefetch" href="/assets/js/7.307492ca.js"><link rel="prefetch" href="/assets/js/70.ebcbdebf.js"><link rel="prefetch" href="/assets/js/71.fb308489.js"><link rel="prefetch" href="/assets/js/72.4269736e.js"><link rel="prefetch" href="/assets/js/73.97302c44.js"><link rel="prefetch" href="/assets/js/74.1b0567e7.js"><link rel="prefetch" href="/assets/js/76.30656d1f.js"><link rel="prefetch" href="/assets/js/77.84b2f04a.js"><link rel="prefetch" href="/assets/js/78.2fb2ff93.js"><link rel="prefetch" href="/assets/js/79.3d464dfe.js"><link rel="prefetch" href="/assets/js/8.7fe48377.js"><link rel="prefetch" href="/assets/js/80.361cc9b4.js"><link rel="prefetch" href="/assets/js/81.141b584e.js"><link rel="prefetch" href="/assets/js/82.5b4da558.js"><link rel="prefetch" href="/assets/js/83.efe1c73e.js"><link rel="prefetch" href="/assets/js/84.3f0def09.js"><link rel="prefetch" href="/assets/js/85.c2c2ca4f.js"><link rel="prefetch" href="/assets/js/86.0f16e067.js"><link rel="prefetch" href="/assets/js/87.2c4d6f7f.js"><link rel="prefetch" href="/assets/js/88.d6e40bca.js"><link rel="prefetch" href="/assets/js/89.0e85c833.js"><link rel="prefetch" href="/assets/js/9.3c5a8fdb.js"><link rel="prefetch" href="/assets/js/90.bb3bdf5f.js"><link rel="prefetch" href="/assets/js/91.d1860356.js"><link rel="prefetch" href="/assets/js/92.d8849871.js"><link rel="prefetch" href="/assets/js/93.3f9cb2df.js"><link rel="prefetch" href="/assets/js/94.419135f9.js"><link rel="prefetch" href="/assets/js/95.0cdbcf10.js"><link rel="prefetch" href="/assets/js/96.d96f4cf4.js"><link rel="prefetch" href="/assets/js/97.94966a5a.js"><link rel="prefetch" href="/assets/js/98.2e78e63d.js"><link rel="prefetch" href="/assets/js/99.30133b82.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1a8e0fbc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Go程序员</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          效率提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/autojump/" class="nav-link">
+  Autojump
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/karabiner-Elements/" class="nav-link">
+  Karabiner
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/KeyCastr/" class="nav-link">
+  KeyCastr
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/item2/" class="nav-link">
+  Item2
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/zsh/" class="nav-link">
+  Zsh
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/tmux/" class="nav-link">
+  Tmux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/效率提升/pnpm/" class="nav-link">
+  pnpm
+</a></li></ul></li><li class="dropdown-item"><h4>
+          编程开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/mac/" class="nav-link">
+  Mac
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/chrome/" class="nav-link">
+  Chrome
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/vim/" class="nav-link">
+  Vim
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/编程开发/sublime/" class="nav-link">
+  Sublime
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用软件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Typora/" class="nav-link">
+  Typora
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Notion/" class="nav-link">
+  Notion
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/Witeboard/" class="nav-link">
+  Witeboard
+</a></li><li class="dropdown-subitem"><a href="/blog/01-工具/通用软件/时光序/" class="nav-link">
+  时光序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          通用硬件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/01-工具/通用硬件/键盘/" class="nav-link">
+  键盘
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="MySQL" class="dropdown-title"><span class="title">MySQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="MySQL" class="mobile-dropdown-title"><span class="title">MySQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  基础篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  索引篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  事务篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  锁篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/05-MySQL/toc/" class="nav-link">
+  日志篇
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Redis" class="dropdown-title"><span class="title">Redis</span> <span class="arrow down"></span></button> <button type="button" aria-label="Redis" class="mobile-dropdown-title"><span class="title">Redis</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  数据类型篇 
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  持久化篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  缓存篇
+</a></li><li class="dropdown-item"><!----> <a href="/blog/06-Redis/toc/" class="nav-link">
+  高可用篇
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/02-操作系统/toc/" class="nav-link">
+  操作系统
+</a></div><div class="nav-item"><a href="/blog/03-计算机网络/toc/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blog/04-Golang/toc/" class="nav-link">
+  Golang
+</a></div><div class="nav-item"><a href="/blog/07-算法/toc/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/blog/08-框架/toc/" class="nav-link">
+  框架
+</a></div><div class="nav-item"><a href="/blog/09-架构设计/toc/" class="nav-link">
+  架构设计
+</a></div><div class="nav-item"><a href="https://github.com/caijinlin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>redis 底层数据结构</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/06-Redis/redis.html#redis-底层数据结构" class="sidebar-link">redis 底层数据结构</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis-持久化" class="sidebar-link">redis 持久化</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis-回收机制" class="sidebar-link">redis 回收机制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/06-Redis/redis.html#过期删除策略" class="sidebar-link">过期删除策略</a></li><li class="sidebar-sub-header"><a href="/blog/06-Redis/redis.html#过期删除策略实现" class="sidebar-link">过期删除策略实现</a></li><li class="sidebar-sub-header"><a href="/blog/06-Redis/redis.html#内存淘汰策略" class="sidebar-link">内存淘汰策略</a></li></ul></li><li><a href="/blog/06-Redis/redis.html#redis异步非阻塞" class="sidebar-link">redis异步非阻塞</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis五种数据结构" class="sidebar-link">redis五种数据结构</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis-lua" class="sidebar-link">redis lua</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis发布订阅" class="sidebar-link">redis发布订阅</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis-一致性hash" class="sidebar-link">redis 一致性hash</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis主从-哨兵-集群的区别" class="sidebar-link">redis主从，哨兵，集群的区别</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis-缓存雪崩-缓存击穿-缓存穿透" class="sidebar-link">redis 缓存雪崩，缓存击穿，缓存穿透</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis-原子操作" class="sidebar-link">redis 原子操作</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#redis-锁" class="sidebar-link">redis 锁</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/06-Redis/redis.html#电商抢购案例" class="sidebar-link">电商抢购案例</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="redis-底层数据结构"><a href="#redis-底层数据结构" class="header-anchor">#</a> redis 底层数据结构</h2> <p>https://juejin.im/post/5d71d3bee51d453b5f1a04f1#heading-18
+https://www.cnblogs.com/ysocean/p/9080942.html</p> <ul><li>SDS (简单动态字符串,底层用字节数组实现)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>struct sdshdr{
+     //记录buf数组中已使用字节的数量
+     //等于 SDS 保存字符串的长度
+     int len;
+     //记录 buf 数组中未使用字节的数量
+     int free;
+     //字节数组，用于保存字符串
+     char buf[];
+}
+</code></pre></div><ul><li>链表 (用无环双端链表实现)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>typedef  struct listNode{
+       //前置节点
+       struct listNode *prev;
+       //后置节点
+       struct listNode *next;
+       //节点的值
+       void *value;  
+}listNode
+
+typedef struct list{
+     //表头节点
+     listNode *head;
+     //表尾节点
+     listNode *tail;
+     //链表所包含的节点数量
+     unsigned long len;
+     //节点值复制函数
+     void (*free) (void *ptr);
+     //节点值释放函数
+     void (*free) (void *ptr);
+     //节点值对比函数
+     int (*match) (void *ptr,void *key);
+}list;
+</code></pre></div><ul><li>字典（用哈希table,链地址法实现，字典里面next指针指向下一个具有相同索引值的哈希表节点）</li></ul> <div class="language- extra-class"><pre class="language-text"><code>typedef struct dictht{
+     //哈希表数组
+     dictEntry **table;
+     //哈希表大小
+     unsigned long size;
+     //哈希表大小掩码，用于计算索引值
+     //总是等于 size-1
+     unsigned long sizemask;
+     //该哈希表已有节点的数量
+     unsigned long used;
+ 
+}dictht
+
+typedef struct dictEntry{
+     //键
+     void *key;
+     //值
+     union{
+          void *val;
+          uint64_tu64;
+          int64_ts64;
+     }v;
+ 
+     //指向下一个哈希表节点，形成链表
+     struct dictEntry *next;
+}dictEntry
+</code></pre></div><ul><li>跳跃表 (多层链表结构组成)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>typedef struct zskiplistNode {
+     //层
+     struct zskiplistLevel{
+           //前进指针
+           struct zskiplistNode *forward;
+           //跨度
+           unsigned int span;
+     }level[];
+ 
+     //后退指针
+     struct zskiplistNode *backward;
+     //分值
+     double score;
+     //成员对象
+     robj *obj;
+ 
+} zskiplistNode
+
+typedef struct zskiplist{
+     //表头节点和表尾节点
+     structz skiplistNode *header, *tail;
+     //表中节点的数量
+     unsigned long length;
+     //表中层数最大的节点的层数
+     int level;
+ 
+}zskiplist;
+</code></pre></div><ul><li>整数集合 (支持多种类型的整数值)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>typedef struct intset{
+     //编码方式
+     uint32_t encoding;
+     //集合包含的元素数量
+     uint32_t length;
+     //保存元素的数组
+     int8_t contents[];
+ 
+}intset;
+</code></pre></div><ul><li>压缩列表 （压缩列表并不是对数据利用某种算法进行压缩，而是将数据按照一定规则编码在一块连续的内存区域，目的是节省内存）
+①、previous_entry_ength：记录压缩列表前一个字节的长度。previous_entry_ength的长度可能是1个字节或者是5个字节，如果上一个节点的长度小于254，则该节点只需要一个字节就可以表示前一个节点的长度了，如果前一个节点的长度大于等于254，则previous length的第一个字节为254，后面用四个字节表示当前节点前一个节点的长度。利用此原理即当前节点位置减去上一个节点的长度即得到上一个节点的起始位置，压缩列表可以从尾部向头部遍历。这么做很有效地减少了内存的浪费。
+②、encoding：节点的encoding保存的是节点的content的内容类型以及长度，encoding类型一共有两种，一种字节数组一种是整数，encoding区域长度为1字节、2字节或者5字节长。
+③、content：content区域用于保存节点的内容，节点内容类型和长度由encoding决定。</li></ul> <h2 id="redis-持久化"><a href="#redis-持久化" class="header-anchor">#</a> redis 持久化</h2> <p>https://juejin.im/post/5d09a9ff51882577eb133aa9#heading-9</p> <ul><li>RDB （快照存储持久化方式）</li> <li><ul><li>将redis莫一刻内存数据保存到硬盘文件，dump.rdb</li></ul></li> <li><ul><li>服务器启动时加载到内存中恢复数据</li></ul></li> <li><ul><li>命令触发： save/bgsave(开启子进程，异步操作，fock子进程过程是同步的)</li></ul></li> <li><ul><li>执行过程：生成临时rdb写入数据，完成时替换正式rdb，删除旧文件</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code># 是否压缩rdb文件
+rdbcompression yes
+
+# rdb文件的名称
+dbfilename redis-6379.rdb
+
+# rdb文件保存目录
+dir ~/redis/
+</code></pre></div><ul><li>AOF (Append-only file)</li> <li><ul><li>AOF持久化方式会记录客户端对服务器的每一次写操作命令，并将这些写操作以Redis协议追加保存到以后缀为aof文件末尾</li></ul></li> <li><ul><li>三种写入策略： always/everysec（每秒写）/no(又操作系统决定什么时候写，不建议)</li></ul></li> <li><ul><li>两种重写方式： no-appendfsync-on-rewrite(以配置的方式开启)/bgrewriteaof（命令触发）</li></ul></li> <li><ul><li>AOF文件损坏时： redis-check-aof -fix file.aof 修复</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code># 开启aof机制
+appendonly yes
+
+# aof文件名
+appendfilename &quot;appendonly.aof&quot;
+
+# 写入策略,always表示每个写操作都保存到aof文件中,也可以是everysec或no
+appendfsync always
+
+# 默认不重写aof文件
+no-appendfsync-on-rewrite no
+
+# 保存目录
+dir ~/redis/
+</code></pre></div><h2 id="redis-回收机制"><a href="#redis-回收机制" class="header-anchor">#</a> redis 回收机制</h2> <p>https://juejin.im/post/5d107ad851882576df7fba9e#heading-16
+redis结构体结构：</p> <div class="language- extra-class"><pre class="language-text"><code>typedef struct redisDb {
+        dict *dict;                 /* 数据库的键空间，保存数据库中的所有键值对 */
+        dict *expires;              /* 保存所有过期的键 */
+        dict *blocking_keys;        /* Keys with clients waiting for data (BLPOP)*/
+        dict *ready_keys;           /* Blocked keys that received a PUSH */
+        dict *watched_keys;         /* WATCHED keys for MULTI/EXEC CAS */
+        int id;                     /* 数据库ID字段，代表不同的数据库 */
+        long long avg_ttl;          /* Average TTL, just for stats */
+} redisDb;
+</code></pre></div><ul><li>用字典来保存每一个键值对</li> <li>expire过期方式：</li> <li><ul><li>设置了过期时间的，过期后加入expires</li></ul></li> <li><ul><li>调用 expire命令，过期的key</li></ul></li> <li><ul><li>恢复或修改数据时，过期的key</li></ul></li></ul> <h3 id="过期删除策略"><a href="#过期删除策略" class="header-anchor">#</a> 过期删除策略</h3> <ul><li><p>定时删除（key过期回收， redis并未采用，会有很多timerfd）</p></li> <li><ul><li>对于每一个设置了过期时间的key都会创建一个定时器，一旦到达过期时间就立即删除，消耗CPU</li></ul></li> <li><p>惰性删除（查询的时候，看key有没有过期，触发回收）</p></li> <li><ul><li>当访问一个key时，才判断该key是否过期，过期则删除。节省CPU资源，对内存却十分不友好。有一种极端的情况是可能出现大量的过期key没有被再次访问，因此不会被清除，导致占用了大量的内存。</li></ul></li> <li><p>定期删除（每隔一段时间，删除过期key, 默认时100ms执行一次）</p></li> <li><ul><li>每隔一段时间，扫描Redis中过期key字典，并清除部分过期的key，还可以通过调整定时扫描的时间间隔和每次扫描的限定耗时</li></ul></li> <li><p>del</p></li> <li><p>unlink</p></li></ul> <h3 id="过期删除策略实现"><a href="#过期删除策略实现" class="header-anchor">#</a> 过期删除策略实现</h3> <ul><li>启动时注册时间事件，在定时器回调过程中执行</li> <li>访问key时，若过期则清除</li> <li>每次事件循环执行时，主动清理部分过期的key</li></ul> <p>总结：
+Redis的过期删除策略是在启动时注册了serverCron函数，每一个时间时钟周期，都会抽取expires字典中的部分key进行清理，从而实现定期删除
+Redis会在访问key时判断key是否过期，如果过期了，就删除
+以及每一次Redis访问事件到来时，beforeSleep都会调用activeExpireCycle函数，在1ms时间内主动清理部分key，这是惰性删除的实现</p> <h3 id="内存淘汰策略"><a href="#内存淘汰策略" class="header-anchor">#</a> 内存淘汰策略</h3> <p>Redis的内存淘汰策略，是指内存达到maxmemory极限时，使用某种算法来决定清理掉哪些数据，以保证新数据的存入</p> <ul><li>noeviction: 当内存不足以容纳新写入数据时，新写入操作会报错。</li> <li>allkeys-lru：当内存不足以容纳新写入数据时，在键空间（server.db[i].dict）中，移除最近最少使用的 key（这个是最常用的）。</li> <li>allkeys-random：当内存不足以容纳新写入数据时，在键空间（server.db[i].dict）中，随机移除某个 key。</li> <li>volatile-lru：当内存不足以容纳新写入数据时，在设置了过期时间的键空间（server.db[i].expires）中，移除最近最少使用的 key。</li> <li>volatile-random：当内存不足以容纳新写入数据时，在设置了过期时间的键空间（server.db[i].expires）中，随机移除某个 key。</li> <li>volatile-ttl：当内存不足以容纳新写入数据时，在设置了过期时间的键空间（server.db[i].expires）中，有更早过期时间的 key 优先移除。</li></ul> <p>淘汰时机： 每一次执行命令时，检查是否达到最大内存，是则出发内存淘汰</p> <h2 id="redis异步非阻塞"><a href="#redis异步非阻塞" class="header-anchor">#</a> redis异步非阻塞</h2> <p>维护EventLoop对象
+里面有两个数组events,fired。events存放被注册的事件，fired用于存放EventLoop从多路复用器（epoll）中读取到的，将要执行的事件
+异步和非阻塞就反映在这里，注册到多路复用器（epoll）后去做其他事，之后通过主动轮询多路复用器，来逐个取出将要执行的事件，放入fired，逐个执行</p> <h2 id="redis五种数据结构"><a href="#redis五种数据结构" class="header-anchor">#</a> redis五种数据结构</h2> <ul><li>string =&gt; set/del   SDS</li></ul> <p>集合类型</p> <ul><li><p>list =&gt; lpush/lpop</p></li> <li><p>hash =&gt; hset/hdel</p></li> <li><p>set =&gt; sadd/srem</p></li> <li><p>zset =&gt; zadd/zrem</p></li> <li><p>bitmap =&gt; 位图存储</p></li> <li><p>geo =&gt; 地理空间key存储， 二分法bit位</p></li> <li><p>hyperloglog =&gt; 内存非常小，聚合查询快，但存在偏差</p></li> <li><p>streams =&gt; 发布订阅多组模式
+https://www.cnblogs.com/CryFace/p/13762241.html</p></li></ul> <h2 id="redis-lua"><a href="#redis-lua" class="header-anchor">#</a> redis lua</h2> <p>script.lua</p> <div class="language- extra-class"><pre class="language-text"><code>local key = &quot;rate.limit:&quot; .. KEYS[1]
+local limit = tonumber(ARGV[1])
+local expire_time = ARGV[2]
+
+local is_exists = redis.call(&quot;EXISTS&quot;, key)
+if is_exists == 1 then
+    if redis.call(&quot;INCR&quot;, key) &gt; limit then
+        return 0
+    else
+        return 1
+    end
+else
+    redis.call(&quot;SET&quot;, key, 1)
+    redis.call(&quot;EXPIRE&quot;, key, expire_time)
+    return 1
+end
+</code></pre></div><p>return 1 == (long) connection.eval(loadScriptString(&quot;script.lua&quot;), keys, argv);</p> <h2 id="redis发布订阅"><a href="#redis发布订阅" class="header-anchor">#</a> redis发布订阅</h2> <p>subscribe cesar
+publish cesar &quot;hello word&quot;</p> <h2 id="redis-一致性hash"><a href="#redis-一致性hash" class="header-anchor">#</a> redis 一致性hash</h2> <p>hash环对2^32取模</p> <h2 id="redis主从-哨兵-集群的区别"><a href="#redis主从-哨兵-集群的区别" class="header-anchor">#</a> redis主从，哨兵，集群的区别</h2> <p>主从：一主一从，启动时从库向主库发送sync命令，主库收到sync命令后在生成快照，并缓存保存快照期间收到的命令，当快照完成时，主库将快照和缓存的命令一起发送给从库，从库进行重放
+哨兵：哨兵机制主要解决主从模式中当主库发送故障，需要人为手动将从库升级为主库的问题。哨兵的作用就是监控redis主从数据库是否正常运行，主出现故障自动将从数据库转换为主数据库
+集群：redis实例存储的内容是完整的数据，浪费内存，为了最大划利用内存，采用集群模式，就是分布式存储。每台redis存储不同的内容，集群至少是三主三从</p> <h2 id="redis-缓存雪崩-缓存击穿-缓存穿透"><a href="#redis-缓存雪崩-缓存击穿-缓存穿透" class="header-anchor">#</a> redis 缓存雪崩，缓存击穿，缓存穿透</h2> <ul><li>缓存雪崩: 大量key同一时间过期，redis故障 =&gt; 减少key同一时间过期，限流，熔断机制</li> <li>缓存击穿: 热点key过期 =&gt; 热点key不设置过期时间</li> <li>缓存穿透: 数据在redis/mysql中都不存在 =&gt; 设置空值</li></ul> <h2 id="redis-原子操作"><a href="#redis-原子操作" class="header-anchor">#</a> redis 原子操作</h2> <ul><li>multi exec</li> <li>lua脚本</li></ul> <h2 id="redis-锁"><a href="#redis-锁" class="header-anchor">#</a> redis 锁</h2> <p>setnx
+getset
+比如解决死锁，保证只有一个线程
+https://blog.csdn.net/wcuuchina/article/details/89154434</p> <h2 id="电商抢购案例"><a href="#电商抢购案例" class="header-anchor">#</a> 电商抢购案例</h2> <ul><li>前端CDN</li> <li>后端nginx限流，放少量链接进来</li> <li>redis锁，不能超卖</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.df07d0bd.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/75.a770d2f2.js" defer></script>
+  </body>
+</html>
